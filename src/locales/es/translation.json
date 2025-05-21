@@ -1,0 +1,141 @@
+{
+  "login": {
+    "title": "Bienvenido de nuevo",
+    "username": "Nombre de usuario",
+    "password": "Contraseña",
+    "submit": "Iniciar sesión",
+    "loading": "Iniciando sesión...",
+    "error": "Nombre de usuario o contraseña incorrectos"
+  },
+  "menu": {
+    "overview": "Resumen",
+    "house": "casa",
+    "orders": "Pedidos",
+    "analysis": "Análisis",
+    "management": "Gestion",
+    "setting": "Ajustes",
+    "calendar": "Calendario",
+    "farm": "Granja",
+    "feedUsage": "Pedidos y uso de alimento",
+    "liveWeight": "Peso de aves automatico",
+    "climate": "Clima",
+    "demand": "Demanda",
+    "settingOrders": "Ajuste de pedidos",
+    "confirmOrders": "Confirmar pedidos",
+    "climateHistory": "Historial clima",
+    "reports": "Informes",
+    "compareData": "Comparar datos",
+    "manageFarm": "Gestionar granja",
+    "manageDevice": "Gestionar dispositivo",
+    "upload": "Subir",
+    "download": "Descargar",
+    "notification": "Notificaciones",
+    "member": "Miembros",
+    "events": "Eventos"
+  },
+  "sidebar": {
+    "selectFarmAndCrop": "Seleccionar granja y raza",
+    "menu": "Menu"
+  },
+  "management": {
+    "title": "Gestión",
+    "manageFarm": "Gestionar granja",
+    "manageHouse": "Gestionar casa",
+    "tabSettingProduction": "Configuración de producción"
+  },
+  "upload": {
+    "title": "Subir",
+    "tabBreed": "Estándar de raza",
+    "tabFeed": "Planificación de alimentación"
+  },
+  "breed": {
+    "title": "Estándar de raza",
+    "selectBreed": "Seleccionar raza",
+    "uploadFile": "Subir archivo",
+    "noData": "No hay datos",
+    "table": {
+      "day": "Edad",
+      "percentLive": "% de supervivencia",
+      "dailyIntake": "Consumo diario de alimento",
+      "cumIntake": "Consumo acumulado",
+      "bodyWeight": "Peso corporal",
+      "dailyGain": "Ganancia diaria",
+      "fcr": "Índice de conversión alimenticia"
+    }
+  },
+  "feedPlan": {
+    "title": "Plan de alimentación",
+    "selectBreed": "Seleccionar plan de alimentación",
+    "uploadFile": "Subir archivo",
+    "noData": "No hay datos",
+    "table": {
+      "day": "Edad",
+      "formular1": "Fórmula Silo1",
+      "formular2": "Fórmula Silo2",
+      "density": "Densidad",
+      "percentbag": "% de alimento en saco"
+    }
+  },
+  "settingProduction": {
+    "title": "Resumen de producción",
+    "manageProduction": "Gestionar producción",
+    "startCrop": "Iniciar ciclo",
+    "Confirm_production_start": "Confirmar inicio de ciclo",
+    "pauseCrop": "Pausar ciclo",
+    "continueCrop": "Reanudar ciclo",
+    "endCrop": "Finalizar ciclo",
+    "confirm_title": "Estás seguro?",
+    "confirmPauseText": "Deseas pausar este ciclo de producción? Puedes reanudarlo más tarde.",
+    "confirmEndText": "Deseas finalizar este ciclo de producción? Esta acción no se puede deshacer.",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "cancel2": "Cancelar",
+    "save_changes": "Guardar",
+    "current": {
+      "mainCrop": "Ciclo actual",
+      "start": "Inicio",
+      "end": "Fin",
+      "status": {
+        "inProcess": "En proceso",
+        "completed": "Completado"
+      }
+    },
+    "historyTitle": "Historial de producción",
+    "noHistory": "No se encontraron ciclos anteriores",
+    "main_crop_details": "Detalles del ciclo",
+    "cropTable": {
+      "house": "casa",
+      "flock": "Parvada",
+      "feed_planning": "Plan de alimentación",
+      "breed_standard": "Estándar de raza",
+      "start_date": "Fecha de inicio",
+      "date_end": "Fecha de fin",
+      "age_start": "Edad inicial",
+      "unit": "Cantidad",
+      "focus_catch": "Foco de captura",
+      "slaughterhouse_weight": "Peso de sacrificio",
+      "catching_date": "Fecha de captura"
+    },
+    "select_feed": "Seleccionar plan de alimentación",
+    "select_breed": "Seleccionar raza",
+    "toast": {
+      "startCrop": "Ciclo de producción iniciado",
+      "no_changes_detected" : "No se detectaron cambios",
+      "startProductionerror": "Error al iniciar el ciclo de producción",
+      "Please_select_the_crop_start_date": "Por favor, selecciona la fecha de inicio del ciclo de producción",
+      "continueCrop": "Ciclo reanudado",
+      "pauseCrop": "Ciclo pausado. Puedes reanudarlo más tarde.",
+      "endCrop": "Ciclo finalizado",
+      "saved": "Guardado exitosamente!",
+      "paused": "Pausado exitosamente!",
+      "errorinrecording": "Error en el registro de datos",
+      "an_error_occurred": "Ocurrio un error",
+      "nodata": "No hay datos",
+      "nodata_description": "No hay datos para guardar. Agrega mas datos.",
+      "max_weight" : "El peso no debe superar {{max}} gramos",
+      "must_be_greater_than_start" : "La fecha de captura debe ser posterior a la fecha de inicio!",
+      "must_be_less_than_the_end" : "La fecha de captura debe ser anterior a la fecha de finalización!"
+    }
+  }
+}

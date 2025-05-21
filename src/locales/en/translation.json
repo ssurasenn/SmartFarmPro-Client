@@ -1,0 +1,145 @@
+{
+  "login": {
+    "title": "Welcome Back",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign In",
+    "loading": "Signing in...",
+    "error": "Incorrect username or password"
+  },
+  "menu": {
+    "overview": "Overview",
+    "house": "House",
+    "orders": "Orders",
+    "analysis": "Analysis",
+    "management": "Management",
+    "setting": "Setting",
+    "calendar": "Calendar",
+    "farm": "Farm",
+    "feedUsage": "Feed Order and Usage",
+    "liveWeight": "Birds Live Weight",
+    "climate": "Climate",
+    "demand": "Demand",
+    "settingOrders": "Setting Orders",
+    "confirmOrders": "Confirm Orders",
+    "climateHistory": "Climate History",
+    "reports": "Reports",
+    "compareData": "Compare Data",
+    "manageFarm": "Manage Farm",
+    "manageDevice": "Manage Device",
+    "upload": "Upload",
+    "download": "Download",
+    "notification": "Notification",
+    "member": "Member",
+    "events": "Events"
+  },
+
+  "sidebar": {
+    "selectFarmAndCrop": "Select Farm & Crop",
+    "selectFarm": "Select Farm...",
+    "selectCrop": "Select Crop...",
+    "menu": "Menu"
+  },
+
+  "management": {
+    "title": "Management",
+    "manageFarm": "Manage Farm",
+    "manageHouse": "Manage House",
+    "tabSettingProduction": "Setting Production"
+  },
+  "upload": {
+    "title": "Upload",
+    "tabBreed": "Breed Standard",
+    "tabFeed": "Feed Planning"
+  },
+  "breed": {
+    "title": "Breed Standard",
+    "selectBreed": "Select Breed",
+    "uploadFile": "Upload File",
+    "noData": "No data available",
+    "table": {
+      "day": "Day",
+      "percentLive": "% Live",
+      "dailyIntake": "Daily Intake",
+      "cumIntake": "Cum. Intake",
+      "bodyWeight": "Body Weight",
+      "dailyGain": "Daily Gain",
+      "fcr": "FCR"
+    }
+  },
+  "feedPlan": {
+    "title": "Feed Planning",
+    "selectBreed": "Select Plan",
+    "uploadFile": "Upload File",
+    "noData": "No data available",
+    "table": {
+      "day": "Day",
+      "formular1": "FormularSilo 1",
+      "formular2": "FormularSilo 2",
+      "density": "Density",
+      "percentbag": "% Bag"
+    }
+  },
+  "settingProduction": {
+    "title": "Production Overview",
+    "manageProduction": "Manage Production",
+    "startCrop": "Start Crop",
+    "Confirm_production_start": "Confirm production start",
+    "pauseCrop": "Pause Crop",
+    "continueCrop": "Continue",
+    "endCrop": "End Crop",
+    "confirm_title": "Are you sure?",
+    "confirmPauseText": "You want to pause this crop? You can continue it later.",
+    "confirmEndText": "You want to end this crop? This action cannot be undone.",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "cancel2": "Cancel",
+    "save_changes": "Save Changes",
+    "current": {
+      "mainCrop": "Main Crop",
+      "start": "Start Crop",
+      "end": "End Crop",
+      "status": {
+        "inProcess": "In Process",
+        "completed": "Completed"
+      }
+    },
+    "historyTitle": "Production History",
+    "noHistory": "No production history found.",
+    "main_crop_details": "Main Crop Details",
+    "cropTable": {
+      "house": "House",
+      "flock": "Flock",
+      "feed_planning": "Feed Planning",
+      "breed_standard": "Breed Standard",
+      "start_date": "Start Date",
+      "date_end": "End Date",
+      "age_start": "Age Start",
+      "unit": "Unit",
+      "focus_catch" : "Focus Catch",
+      "slaughterhouse_weight": "Slaughterhouse Wt.",
+      "catching_date": "Catching Date"
+    },
+    "select_feed": "Select FeedPlanning",
+    "select_breed": "Select Breed",
+    "toast": {
+      "startCrop": "Production begins",
+      "no_changes_detected" : "No changes detected",
+      "startProductionerror": "Error in starting production",
+      "Please_select_the_crop_start_date": "Please select the crop start date",
+      "continueCrop": "Production on going",
+      "pauseCrop": "Production is temporarily paused. You can continue later.",
+      "endCrop": "Production completed",
+      "saved": "Saved successfully!",
+      "paused": "Paused successfully!",
+      "errorinrecording": "Error in recording data",
+      "an_error_occurred": "An error occurred",
+      "nodata" : "No data available",
+      "nodata_description" : "There is no data to save. Please add more data.",
+      "max_weight" : "Max weight must not exceed {{max}} grams",
+      "must_be_greater_than_start" : "Catching date must be greater than the starting date!",
+      "must_be_less_than_the_end" : "Catching date must be less than the end date!"
+    }
+  }
+}

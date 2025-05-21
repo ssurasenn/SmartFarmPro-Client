@@ -1,0 +1,141 @@
+{
+  "login": {
+    "title": "欢迎回来",
+    "username": "用户名",
+    "password": "密码",
+    "submit": "登录",
+    "loading": "正在登录...",
+    "error": "用户名或密码不正确"
+  },
+  "menu": {
+    "overview": "概览",
+    "house": "房间",
+    "orders": "订单",
+    "analysis": "分析",
+    "management": "管理",
+    "setting": "设置",
+    "calendar": "日历",
+    "farm": "农场",
+    "feedUsage": "订单和用量",
+    "liveWeight": "鸡的实时重量",
+    "climate": "气候",
+    "demand": "需求",
+    "settingOrders": "设置订单",
+    "confirmOrders": "确认订单",
+    "climateHistory": "气候历史",
+    "reports": "报告",
+    "compareData": "比较数据",
+    "manageFarm": "管理农场",
+    "manageDevice": "管理设备",
+    "upload": "上传",
+    "download": "下载",
+    "notification": "通知",
+    "member": "成员",
+    "events": "活动"
+  },
+  "sidebar": {
+    "selectFarmAndCrop": "选择农场和鸡舍",
+    "menu": "菜单"
+  },
+  "management": {
+    "title": "管理",
+    "manageFarm": "管理农场",
+    "manageHouse": "管理房屋",
+    "tabSettingProduction": "生产设置"
+  },
+  "upload": {
+    "title": "上传",
+    "tabBreed": "品种标准",
+    "tabFeed": "饲喂计划"
+  },
+  "breed": {
+    "title": "品种标准",
+    "selectBreed": "选择品种",
+    "uploadFile": "上传文件",
+    "noData": "暂无数据",
+    "table": {
+      "day": "日龄",
+      "percentLive": "存活率 (%)",
+      "dailyIntake": "每日采食量",
+      "cumIntake": "累计采食量",
+      "bodyWeight": "体重",
+      "dailyGain": "日增重",
+      "fcr": "料肉比"
+    }
+  },
+  "feedPlan": {
+    "title": "饲喂计划",
+    "selectBreed": "选择饲喂计划",
+    "uploadFile": "上传文件",
+    "noData": "暂无数据",
+    "table": {
+      "day": "日龄",
+      "formular1": "料塔1号配方",
+      "formular2": "料塔2号配方",
+      "density": "密度",
+      "percentbag": "袋装饲料 (%)"
+    }
+  },
+  "settingProduction": {
+    "title": "养殖概览",
+    "manageProduction": "管理养殖",
+    "startCrop": "开始养殖",
+    "Confirm_production_start": "确认开始养殖",
+    "pauseCrop": "暂停养殖周期",
+    "continueCrop": "继续",
+    "endCrop": "结束养殖",
+    "confirm_title": "你确定吗？",
+    "confirmPauseText": "你确定要暂停此养殖周期吗？你可以稍后继续操作。",
+    "confirmEndText": "你确定要结束此养殖周期吗？该操作不可撤销。",
+    "confirm": "确认",
+    "cancel": "取消",
+    "edit": "编辑",
+    "cancel2": "取消",
+    "save_changes": "保存更改",
+    "current": {
+      "mainCrop": "养殖周期",
+      "start": "开始日期",
+      "end": "结束日期",
+      "status": {
+        "inProcess": "进行中",
+        "completed": "已完成"
+      }
+    },
+    "historyTitle": "养殖历史",
+    "noHistory": "未找到养殖历史",
+    "main_crop_details": "养殖周期详情",
+    "cropTable": {
+      "house": "鸡舍",
+      "flock": "鸡群",
+      "feed_planning": "饲喂计划",
+      "breed_standard": "品种标准",
+      "start_date": "开始日期",
+      "date_end": "结束日期",
+      "age_start": "开始日龄",
+      "unit": "数量",
+      "focus_catch": "焦点抓鸡",
+      "slaughterhouse_weight": "屠宰重量",
+      "catching_date": "抓鸡日期"
+    },
+    "select_feed": "选择饲喂计划",
+    "select_breed": "选择品种",
+    "toast": {
+      "startCrop": "养殖周期已开始",
+      "no_changes_detected" : "未检测到更改",
+      "startProductionerror": "开始养殖时出错",
+      "Please_select_the_crop_start_date": "请选择养殖开始日期",
+      "continueCrop": "养殖已继续",
+      "pauseCrop": "养殖周期已暂停，可稍后继续",
+      "endCrop": "养殖周期已结束",
+      "saved": "保存成功！",
+      "paused": "暂停成功！",
+      "errorinrecording": "记录数据时出错",
+      "an_error_occurred": "发生错误",
+      "nodata": "无数据",
+      "nodata_description": "没有可保存的数据。请添加更多数据。",
+      "max_weight" : "最大重量不得超过{{max}}克",
+      "must_be_greater_than_start" : "抓捕日期必须晚于开始日期!",
+      "must_be_less_than_the_end" : "抓捕日期必须早于结束日期!"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+    "daily-feed": [
+      { "Day": 1, "Target": 50, "Average": 48, "House1": 49, "FCR": 1.65, "Bodyweight": 100 },
+      { "Day": 2, "Target": 55, "Average": 53, "House1": 52, "FCR": 1.60, "Bodyweight": 120 },
+      { "Day": 3, "Target": 60, "Average": 58, "House1": 57, "FCR": 1.58, "Bodyweight": 145 },
+      { "Day": 4, "Target": 65, "Average": 63, "House1": 62, "FCR": 1.58, "Bodyweight": 150 },
+      { "Day": 5, "Target": 70, "Average": 68, "House1": 69, "FCR": 1.78, "Bodyweight": 155 },
+      { "Day": 6, "Target": 75, "Average": 73, "House1": 72, "FCR": 1.88, "Bodyweight": 160 },
+      { "Day": 7, "Target": 80, "Average": 78, "House1": 79, "FCR": 1.78, "Bodyweight": 165 },
+      { "Day": 8, "Target": 85, "Average": 83, "House1": 82, "FCR": 1.98, "Bodyweight": 175 },
+      { "Day": 9, "Target": 90, "Average": 88, "House1": 89, "FCR": 1.98, "Bodyweight": 175 },
+      { "Day": 10, "Target": 95, "Average": 93, "House1": 92, "FCR": 2.05, "Bodyweight": 185 },
+      { "Day": 11, "Target": 105, "Average": 103, "House1": 102, "FCR": 3.55, "Bodyweight": 190 },
+      { "Day": 12, "Target": 120, "Average": 140, "House1": 102, "FCR": 4.78, "Bodyweight": 220 },
+      { "Day": 13, "Target": 130, "Average": 150, "House1": 120, "FCR": 4.88, "Bodyweight": 230 },
+      { "Day": 14, "Target": 140, "Average": 180, "House1": 130, "FCR": 5.78, "Bodyweight": 250 },
+      { "Day": 15, "Target": 145, "Average": 185, "House1": 135, "FCR": 7.98, "Bodyweight": 260 },
+      { "Day": 16, "Target": 160, "Average": 190, "House1": 150, "FCR": 9.98, "Bodyweight": 270 },
+      { "Day": 17, "Target": 170, "Average": 195, "House1": 160, "FCR": 12.05, "Bodyweight": 295 }
+    ],
+    "weight-data": [
+      {
+        "house": "House1",
+        "age": 37,
+        "standard": 2327,
+        "estimate": 2219,
+        "actual": 2219,
+        "sampling": 904,
+        "ach": 95.65,
+        "sd": 239.74,
+        "cv": 10.8,
+        "uniformity": 66.15,
+        "adg": 60.15
+      },
+      {
+        "house": "House2",
+        "age": 37,
+        "standard": 2327,
+        "estimate": 2219,
+        "actual": 2219,
+        "sampling": 904,
+        "ach": 95.65,
+        "sd": 239.74,
+        "cv": 10.8,
+        "uniformity": 66.15,
+        "adg": 60.15
+      }  
+    ],    
+      "bell-curve": [
+        { "weight": 0, "percentage": 0.0001 },
+        { "weight": 182, "percentage": 0.0003 },
+        { "weight": 364, "percentage": 0.0012 },
+        { "weight": 546, "percentage": 0.0035 },
+        { "weight": 728, "percentage": 0.008 },
+        { "weight": 910, "percentage": 0.015 },
+        { "weight": 1092, "percentage": 0.028 },
+        { "weight": 1274, "percentage": 0.045 },
+        { "weight": 1456, "percentage": 0.07 },
+        { "weight": 1638, "percentage": 0.1 },
+        { "weight": 1820, "percentage": 0.13 },
+        { "weight": 2002, "percentage": 0.155 },
+        { "weight": 2184, "percentage": 0.17 },
+        { "weight": 2366, "percentage": 0.14 },
+        { "weight": 2548, "percentage": 0.07 },
+        { "weight": 2730, "percentage": 0.01 }
+      ],
+      "weight-summary" : [
+        
+          {"name": "House1"},
+          {"Standard": 2300},
+          {"Estimate": 2200},
+          {"Actual": 2180}        
+      ],
+      "feed-order-stimate" : [
+        { "date": "28-02-25", "day": "d-10", "no": 10, "remain": "0.00 ton", "refill": null, "fillingDate": null, "order": null },
+        { "date": "01-03-25", "day": "d-9", "no": 9, "remain": "0.00 ton", "refill": null, "fillingDate": null, "order": null },
+        { "date": "02-03-25", "day": "d-8", "no": 8, "remain": "0.00 ton", "refill": null, "fillingDate": null, "order": null },
+        { "date": "03-03-25", "day": "d-7", "no": 7, "remain": "0.00 ton", "refill": null, "fillingDate": null, "order": null },
+        { "date": "04-03-25", "day": "d-6", "no": 6, "remain": "0.00 ton", "refill": null, "fillingDate": null, "order": null },
+        { "date": "05-03-25", "day": "d-5", "no": 5, "remain": "0.00 ton", "refill": null, "fillingDate": null, "order": null },
+        { "date": "06-03-25", "day": "d-4", "no": 4, "remain": "0.00 ton", "refill": null, "fillingDate": null, "order": null },
+        { "date": "07-03-25", "day": "d-3", "no": 3, "remain": "7.67 ton", "refill": "7.68 ton", "fillingDate": null, "order": null }
+      ]
+    
+  }
+  

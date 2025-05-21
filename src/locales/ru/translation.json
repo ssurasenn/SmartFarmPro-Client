@@ -1,0 +1,141 @@
+{
+  "login": {
+    "title": "С возвращением",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "submit": "Войти",
+    "loading": "Вход в систему...",
+    "error": "Неверное имя пользователя или пароль"
+  },
+  "management": {
+    "title": "Управление",
+    "manageFarm": "Управление фермой",
+    "manageHouse": "Управление домом",
+    "tabSettingProduction": "Настройки производства"
+  },
+  "upload": {
+    "title": "Загрузка",
+    "tabBreed": "Стандарт породы",
+    "tabFeed": "План кормления"
+  },
+  "menu": {
+    "overview": "Обзор",
+    "house": "Дом",
+    "orders": "Заказы",
+    "analysis": "Анализ",
+    "management": "Управление",
+    "setting": "Настройки",
+    "calendar": "Календарь",
+    "farm": "Ферма",
+    "feedUsage": "Заказы и использование корма",
+    "liveWeight": "Автоматический вес птицы",
+    "climate": "Климат",
+    "demand": "Требования",
+    "settingOrders": "Настройка заказов",
+    "confirmOrders": "Подтверждение заказов",
+    "climateHistory": "История климата",
+    "reports": "Отчеты",
+    "compareData": "Сравнение данных",
+    "manageFarm": "Управление фермой",
+    "manageDevice": "Управление устройством",
+    "upload": "Загрузка",
+    "download": "Скачать",
+    "notification": "Уведомления",
+    "member": "Участники",
+    "events": "События"
+  },
+  "sidebar": {
+    "selectFarmAndCrop": "Выбрать ферму и культуру",
+    "menu": "Меню"
+  },
+  "breed": {
+    "title": "Стандарт породы",
+    "selectBreed": "Выбрать породу",
+    "uploadFile": "Загрузить файл",
+    "noData": "Нет данных",
+    "table": {
+      "day": "Возраст (дни)",
+      "percentLive": "% выживаемости",
+      "dailyIntake": "Суточное потребление корма",
+      "cumIntake": "Накопленное потребление корма",
+      "bodyWeight": "Масса тела",
+      "dailyGain": "Ежедневный прирост",
+      "fcr": "Коэффициент конверсии корма"
+    }
+  },
+  "feedPlan": {
+    "title": "План кормления",
+    "selectBreed": "Выбрать план кормления",
+    "uploadFile": "Загрузить файл",
+    "noData": "Нет данных",
+    "table": {
+      "day": "Возраст (дни)",
+      "formular1": "Формула силоса 1",
+      "formular2": "Формула силоса 2",
+      "density": "Плотность",
+      "percentbag": "% корма в мешках"
+    }
+  },
+  "settingProduction": {
+    "title": "Обзор разведения",
+    "manageProduction": "Управление процессом",
+    "startCrop": "Начать цикл",
+    "Confirm_production_start": "Подтвердить начало процесса",
+    "pauseCrop": "Приостановить цикл",
+    "continueCrop": "Продолжить",
+    "endCrop": "Завершить цикл",
+    "confirm_title": "Вы уверены?",
+    "confirmPauseText": "Вы хотите приостановить этот цикл? Вы сможете продолжить позже.",
+    "confirmEndText": "Вы хотите завершить этот цикл? Это действие необратимо.",
+    "confirm": "Подтвердить",
+    "cancel": "Отмена",
+    "edit": "Редактировать",
+    "cancel2": "Отменить",
+    "save_changes": "Сохранить",
+    "current": {
+      "mainCrop": "Текущий цикл",
+      "start": "Начало",
+      "end": "Завершение",
+      "status": {
+        "inProcess": "В процессе",
+        "completed": "Завершено"
+      }
+    },
+    "historyTitle": "История циклов",
+    "noHistory": "История не найдена",
+    "main_crop_details": "Детали текущего цикла",
+    "cropTable": {
+      "house": "Птичник",
+      "flock": "Стадо",
+      "feed_planning": "План кормления",
+      "breed_standard": "Стандарт породы",
+      "start_date": "Дата начала",
+      "date_end": "Дата окончания",
+      "age_start": "Возраст в начале",
+      "unit": "Количество",
+      "focus_catch": "Количество убитых",
+      "slaughterhouse_weight": "Вес при убое",
+      "catching_date": "Дата отлова"
+    },
+    "select_feed": "Выбрать план кормления",
+    "select_breed": "Выбрать породу",
+    "toast": {
+      "startCrop": "Цикл начат",
+      "no_changes_detected" : "Нет изменений",
+      "startProductionerror": "Ошибка при начале цикла",
+      "Please_select_the_crop_start_date": "Пожалуста, выберите дату начала цикла",
+      "continueCrop": "Цикл продолжен",
+      "pauseCrop": "Цикл приостановлен! Вы можете продолжить позже.",
+      "endCrop": "Цикл завершен",
+      "saved": "Успешно сохранено!",
+      "paused": "Успешно приостановлено!",
+      "errorinrecording": "Ошибка в записи данных",
+      "an_error_occurred": "Произошла ошибка",
+      "nodata": "Нет данных",
+      "nodata_description": "Нет данных для сохранения. Добавьте больше данных.",
+      "max_weight" : "Максимальная масса не должна превышать {{max}} грамм",
+      "must_be_greater_than_start" : "Дата отлова должна быть позже даты начала!",
+      "must_be_less_than_the_end" : "Дата отлова должна быть раньше даты окончания!"
+    }
+  }
+}
