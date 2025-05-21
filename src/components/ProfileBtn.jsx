@@ -41,7 +41,7 @@ const ProfileBtn = () => {
         <img
           src={profileImage || defaultImage }
           alt="profile"
-          className="w-8 h-8 rounded-full object-cover shadow-gray-400 shadow dark:shadow-lg dark:shadow-gray hover:shadow-lg"
+          className="w-8 h-8 rounded-full object-cover shadow-gray-400 shadow dark:shadow-md dark:shadow-gray-400 hover:shadow-lg"
         />
         
       </div>

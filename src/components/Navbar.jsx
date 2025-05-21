@@ -58,6 +58,7 @@ const Navbar = ({ toggleSidebar, openMenu, setOpenMenu }) => {
   }, [setOpenMenu]);
   return (
     <div className="flex justify-between items-center p-4 bg-white  dark:bg-[#222222] dark:text-white">
+    {/* <div className="hidden  justify-between items-center p-4 bg-white  dark:bg-[#222222] dark:text-white"> */}
       <div className="flex items-center gap-4">
 
         {/* <<<<---- Hamburger Btn Mobile Screen --->>>> */}

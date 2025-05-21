@@ -12,6 +12,38 @@ const ManageFarm = () => {
   return (
     <div className="md:p-4 space-y-2">
       
+      {/* <div className="hidden items-center justify-center gap-3 md:gap-6">
+        <h1
+          className={`cursor-pointer pb-1 border-b-2 text-xs md:text-md lg:text-base ${
+            selectedTab === "manage-farm"
+              ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
+              : "border-transparent text-gray-500"
+          }`}
+          onClick={() => setSelectedTab("manage-farm")}
+        >
+          {t("management.manageFarm")}
+        </h1>
+        <h1
+          className={`cursor-pointer pb-1 border-b-2 text-xs md:text-md lg:text-base ${
+            selectedTab === "manage-house"
+              ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
+              : "border-transparent text-gray-500"
+          }`}
+          onClick={() => setSelectedTab("manage-house")}
+        >
+          {t("management.manageHouse")}
+        </h1>
+        <h1
+          className={`cursor-pointer pb-1 border-b-2 text-xs md:text-md lg:text-base ${
+            selectedTab === "setting-production"
+              ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
+              : "border-transparent text-gray-500"
+          }`}
+          onClick={() => setSelectedTab("setting-production")}
+        >
+          {t("management.tabSettingProduction")}
+        </h1>
+      </div> */}
       <div className="flex items-center justify-center gap-3 md:gap-6">
         <h1
           className={`cursor-pointer pb-1 border-b-2 text-xs md:text-md lg:text-base ${

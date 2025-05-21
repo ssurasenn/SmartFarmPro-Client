@@ -1,11 +1,11 @@
 {
   "login": {
-    "title": "Welcome Back",
-    "username": "Username",
+    "accountLogin": "Account Login",
+    "email_address": "Email address",
     "password": "Password",
-    "submit": "Sign In",
+    "submit": "Login",
     "loading": "Signing in...",
-    "error": "Incorrect username or password"
+    "error": "Incorrect email or password"
   },
   "menu": {
     "overview": "Overview",
