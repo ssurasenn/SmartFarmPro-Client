@@ -25,7 +25,7 @@ const dataHouse =[
             "silog" : [
                 {
                     "siloName": "Silo 1",
-                    "img": "/src/assets/img/test-silo.png",
+                    "img": "../assets/test-silo.png",
 
                     "feedRemainKg":"13,156",
                     "feedRemainPercent" : "93.97%",
@@ -33,7 +33,7 @@ const dataHouse =[
                 },
                 {
                     "siloName": "Silo 2",
-                    "img": "/src/assets/img/test-silo.png",
+                    "img": "../assets/test-silo.png",
 
                     "feedRemainKg":"1,000",
                     "feedRemainPercent" : "8.97%",
@@ -45,7 +45,7 @@ const dataHouse =[
             "label": "Birds Live Weight", 
             "ckale" :[
                 {
-                    "img" : "/src/assets/img/Ckale.png",
+                    "img" : "../assets/Ckale.png",
                     "weight" : "1436",
                     "weightRange" : "Size S",
                     "forcast" : "0.000%",
@@ -83,7 +83,7 @@ const dataHouse =[
             "silog" : [
                 {
                     "siloName": "Silo 1",
-                    "img": "/src/assets/img/test-silo.png",
+                    "img": "../assets/test-silo.png",
 
                     "feedRemainKg":"13,156",
                     "feedRemainPercent" : "93.97%",
@@ -91,7 +91,7 @@ const dataHouse =[
                 },
                 {
                     "siloName": "Silo 2",
-                    "img": "/src/assets/img/test-silo.png",
+                    "img": "../assets/test-silo.png",
 
                     "feedRemainKg":"1,000",
                     "feedRemainPercent" : "8.97%",
@@ -103,7 +103,7 @@ const dataHouse =[
             "label": "Birds Live Weight", 
             "ckale" :[
                 {
-                    "img" : "/src/assets/img/Ckale.png",
+                    "img" : "../assets/Ckale.png",
                     "weight" : "1436",
                     "weightRange" : "Size S",
                     "forcast" : "0.000%",
@@ -141,7 +141,7 @@ const dataHouse =[
             "silog" : [
                 {
                     "siloName": "Silo 1",
-                    "img": "/src/assets/img/test-silo.png",
+                    "img": "../assets/test-silo.png",
 
                     "feedRemainKg":"13,156",
                     "feedRemainPercent" : "93.97%",
@@ -149,7 +149,7 @@ const dataHouse =[
                 },
                 {
                     "siloName": "Silo 2",
-                    "img": "/src/assets/img/test-silo.png",
+                    "img": "../assets/test-silo.png",
 
                     "feedRemainKg":"1,000",
                     "feedRemainPercent" : "8.97%",
@@ -161,7 +161,7 @@ const dataHouse =[
             "label": "Birds Live Weight", 
             "ckale" :[
                 {
-                    "img" : "/src/assets/img/Ckale.png",
+                    "img" : "../assets/Ckale.png",
                     "weight" : "1436",
                     "weightRange" : "Size S",
                     "forcast" : "0.000%",
