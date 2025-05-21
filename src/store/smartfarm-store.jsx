@@ -9,6 +9,9 @@ import dayjs from "dayjs";
 const SmartFarmStore = (set) => ({
   token: null,
   user: null, // 👉 เพิ่ม user object
+  isAuthenticated: false,
+isHydrated: false,
+
   farms: [],
   houseCodes: [],
   croplist: [],
@@ -110,7 +113,7 @@ const SmartFarmStore = (set) => ({
       axios.defaults.headers.common["Authorization"] = `Bearer ${access_token}`;
       localStorage.setItem("token", access_token);
 
-      set({ token: access_token, user: userData }); // ✅ เก็บ user data ด้วย
+      set({ token: access_token, user: userData, isAuthenticated: true  }); // ✅ เก็บ user data ด้วย
       return { success: true };
     } catch (err) {
       console.log(err)
@@ -127,7 +130,16 @@ const SmartFarmStore = (set) => ({
       token: null,
       user: null,
     });
-    localStorage.removeItem("smartfarm-storage"); // ถ้าใช้ persist และเก็บ token/user
+    localStorage.removeItem("token"); // ถ้าใช้ persist และเก็บ token/user
+  },
+  checkAuth: () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      set({ token, isAuthenticated: true, isHydrated: true });
+    } else {
+      set({ token: null, isAuthenticated: false, isHydrated: true });
+    }
   },
   
   // getProduction: async (farmCode, cropCode) => {

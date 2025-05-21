@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 
@@ -26,7 +26,7 @@ import ClimateHistory from "./pages/Analysis/ClimateHistory";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CompareData from "./pages/Analysis/CompareData";
-import Reports from './pages/Analysis/Reports';
+import Reports from "./pages/Analysis/Reports";
 import Calendar from "./pages/Calendar/Calendar";
 // import { SelectionProvider } from "./context/SelectionContext";
 
@@ -36,51 +36,59 @@ import LoginPage from "./pages/LoginPage";
 
 import SettingProfile from "./components/SettingProfile";
 import Upload from "./pages/Manage/Upload";
+import useFarmStore from "./store/smartfarm-store";
+import ProtectedRoute from "./pages/ProtectRoute";
 const App = () => {
+  const checkAuth = useFarmStore((state) => state.checkAuth);
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-    <Router>
-      <ToastContainer />
-      <Routes>
-       <Route path="/login" element={<LoginPage />} />
+      <Router>
+        <ToastContainer />
+        <Routes>
+          {/* หน้า login */}
+          <Route path="/login" element={<LoginPage />} />
 
-        {/* <Route element={<ProtectedRoute />}> */}
-        <Route path="/" element={<MainLayout />}>
-          {/* Default page when visiting "/" */}
-          <Route index element={<OverviewHouse />} />
-          {/* <<<----- Overview ----->>> */}
-          <Route path="/overview/house" element={<OverviewHouse />} />
-          <Route path="/overview/farm" element={<OverviewFarm />} />
-          {/* <<<----- House ----->>> */}
-          <Route path="/house/feeds" element={<FeedOrderAndUsage />} />
-          <Route path="/house/weight" element={<BirdsLiveWeight />} />
-          <Route path="/house/climate" element={<Climate />} />
-          {/* <<<----- Orders ----->>> */}
-          <Route path="/orders/demand" element={<Demand />} />
-          <Route path="/orders/setting" element={<SettingOrders />} />
-          <Route path="/orders/confirm" element={<ConfirmOrders />} />
-          {/* <<<-----Analysis ----->>> */}
-          <Route path="/analysis/climatehistory" element={<ClimateHistory />} />
-          <Route path="/analysis/reports" element={<Reports/>} />
-          <Route path="/analysis/comparedata" element={<CompareData />} />
-          {/* <<<----- Manage ----->>> */}
-          <Route path="/manage/farm" element={<ManageFarm />} />
-          <Route path="/manage/device" element={<ManageDevice />} />
-          <Route path="/manage/upload" element={<Upload />} />
-          {/* <<<----- Settings ----->>> */}
-          <Route path="/settings/notification" element={<Notification />} />
-          <Route path="/settings/member" element={<Member />} />
-          {/* <<<----- Calendar ----->>> */}
-          <Route path="/calendar/events" element={<Calendar />} />
-
-          {/* Other Routes */}
-          <Route path="/house/feed-order-and-usage"element={<FeedOrderAndUsage />}/>
-          <Route path="/house/birds-live-weight"element={<BirdsLiveWeight />}/>
-          <Route path="/profile-setting"element={<SettingProfile />}/>
-        </Route>
-        {/* </Route> */}
-      </Routes>
-    </Router>
+          {/* Routes ที่ต้องล็อกอิน */}
+          <Route element={<ProtectedRoute />}>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<OverviewHouse />} />
+              <Route path="/overview/house" element={<OverviewHouse />} />
+              <Route path="/overview/farm" element={<OverviewFarm />} />
+              <Route path="/house/feeds" element={<FeedOrderAndUsage />} />
+              <Route path="/house/weight" element={<BirdsLiveWeight />} />
+              <Route path="/house/climate" element={<Climate />} />
+              <Route path="/orders/demand" element={<Demand />} />
+              <Route path="/orders/setting" element={<SettingOrders />} />
+              <Route path="/orders/confirm" element={<ConfirmOrders />} />
+              <Route
+                path="/analysis/climatehistory"
+                element={<ClimateHistory />}
+              />
+              <Route path="/analysis/reports" element={<Reports />} />
+              <Route path="/analysis/comparedata" element={<CompareData />} />
+              <Route path="/manage/farm" element={<ManageFarm />} />
+              <Route path="/manage/device" element={<ManageDevice />} />
+              <Route path="/manage/upload" element={<Upload />} />
+              <Route path="/settings/notification" element={<Notification />} />
+              <Route path="/settings/member" element={<Member />} />
+              <Route path="/calendar/events" element={<Calendar />} />
+              <Route
+                path="/house/feed-order-and-usage"
+                element={<FeedOrderAndUsage />}
+              />
+              <Route
+                path="/house/birds-live-weight"
+                element={<BirdsLiveWeight />}
+              />
+              <Route path="/profile-setting" element={<SettingProfile />} />
+            </Route>
+          </Route>
+        </Routes>
+      </Router>
     </LocalizationProvider>
   );
 };

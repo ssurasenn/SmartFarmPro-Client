@@ -511,7 +511,7 @@ const Manage_productVersionThree = () => {
   }, [activeProduction, houseList]);
 
   return (
-    <div className="lg:px-5 lg:py-2">
+    <div className="lg:px-4 lg:py-2">
       {/* Title */}
       <h1 className="text-md md:text-xl font-bold text-gray-800 dark:text-white ">
         {t("settingProduction.title")}
