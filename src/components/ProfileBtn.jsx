@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import defaultProfile from "../assets/img/profile1.jpg";
+// import { IoPersonCircle } from "react-icons/io5";
+import defaultImage from "../assets/images_avatar.jpeg"
 import useFarmStore from "../store/smartfarm-store";
 
 const ProfileBtn = () => {
@@ -38,9 +39,9 @@ const ProfileBtn = () => {
         onClick={() => setOpen((prev) => !prev)}
       >
         <img
-          src={profileImage || defaultProfile}
+          src={profileImage || defaultImage }
           alt="profile"
-          className="w-8 h-8 rounded-full object-cover shadow-md dark:shadow-lg dark:shadow-gray"
+          className="w-8 h-8 rounded-full object-cover shadow-gray-400 shadow dark:shadow-lg dark:shadow-gray hover:shadow-lg"
         />
         
       </div>

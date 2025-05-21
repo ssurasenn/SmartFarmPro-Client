@@ -1,9 +1,9 @@
 import React from "react";
 import dataHouse from "../../data/Overview_house";
 import { Link } from "react-router-dom";
-import image1 from "../../assets/img/imgchicken1.svg";
-import image2 from "../../assets/img/imgchicken2.svg";
-import image3 from "../../assets/img/light.png";
+import image1 from "../../assets/imgchicken1.svg";
+import image2 from "../../assets/imgchicken2.svg";
+import image3 from "../../assets/light.png";
 
 const OverviewHouse = () => {
   const housesWithName = dataHouse.filter((house) => house.houseName);

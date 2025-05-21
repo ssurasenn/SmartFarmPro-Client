@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useFarmStore from "../store/smartfarm-store";
-import defaultProfile from "../assets/img/profile1.jpg";
+import defaultImage from "../assets/images_avatar.jpeg"
+
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
@@ -56,7 +57,7 @@ const SettingProfile = () => {
       {/* Profile Image Upload */}
       <div className="flex items-center gap-4 mb-6">
         <img
-          src={previewImage || defaultProfile}
+          src={previewImage || defaultImage}
           alt="profile"
           className="w-20 h-20 rounded-full object-cover border"
         />
