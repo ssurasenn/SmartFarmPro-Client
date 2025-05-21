@@ -48,7 +48,7 @@ const NotificationBtn = () => {
         </span>
       )}
       {open && (
-        <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-700 rounded-lg shadow-lg border border-gray-300 dark:border-gray-700 z-20">
+        <div className="absolute md:right-0 mt-2 w-64 bg-white dark:bg-gray-700 rounded-lg shadow-lg border border-gray-300 dark:border-gray-700 z-20">
           
           <ul className="py-2 max-h-64 overflow-y-auto">
             {notifications.filter((n) => !n.read).length > 0 ? (
