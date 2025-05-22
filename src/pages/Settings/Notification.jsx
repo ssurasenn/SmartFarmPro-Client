@@ -4,6 +4,7 @@ import { FaSave } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 import { IoSearchSharp } from "react-icons/io5";
 import usePersistentTab from "../../context/usePersistentTab";
+import { useTranslation } from "react-i18next";
 
 const Notification = () => {
   // const [activeTab, setActiveTab] = useState("summary");
@@ -11,11 +12,11 @@ const Notification = () => {
     "notificationTab",
     "summary"
   );
-
+  const { t }= useTranslation();
   const tabs = [
-    { id: "summary", label: "Summary Report" },
-    { id: "alarm", label: "Alarm & Warning" },
-    { id: "language", label: "Message Language" },
+    { id: "summary", label: t("setting.summaryReport") },
+    { id: "alarm", label: t("setting.alarmWarning") },
+    { id: "language", label: t("setting.messageLanguage") },
   ];
 
   //Notification Input-Message
@@ -29,7 +30,7 @@ const Notification = () => {
 
   //Toastify
   const handleSave = () => {
-    toast.success(" Saved successfully!", {
+    toast.success(t("settingProduction.toast.saved"), {
       position: "top-right",
       autoClose: 3000, // 3 วินาที
       hideProgressBar: false,
@@ -41,9 +42,9 @@ const Notification = () => {
 
   return (
     <div className="p-6 space-y-4">
-      <h1 className="text-md md:text-xl lg:tex-2xl lg:pl-20 font-bold text-gray-700 dark:text-white mb-6">
+      {/* <h1 className="text-md md:text-xl lg:tex-2xl lg:pl-20 font-bold text-gray-700 dark:text-white mb-6">
         Setting Farm
-      </h1>
+      </h1> */}
       <div className="flex justify-center">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-10 transition hover:shadow-xl w-full max-w-[775px]">
           <div className="flex justify-center mb-4">
@@ -65,34 +66,34 @@ const Notification = () => {
           {activeTab === "summary" && (
             <div className="space-y-1">
               <h3 className="font-semibold text-sm md:text-md dark:text-gray-300">
-                Farm Report
+                {t("setting.farmReort")}
               </h3>
               <table className="min-w-full text-sm md:text-md border-collapse rounded-xl overflow-hidden mt-3">
                 <thead className="bg-gray-400 dark:bg-[#374151] text-white ">
                   <tr>
                     <th className="text-center text-xs px-4 py-2 border-b border-white">
-                      Report Type
+                      {t("setting.reportType")}
                     </th>
                     <th className="text-center text-xs px-4 py-3 border-b border-white">
-                      Time
+                      {t("setting.time")}
                     </th>
                     <th className="text-center text-xs px-4 py-3 border-b border-white">
-                      Enable
+                      {t("setting.enable")}
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                   {[
-                    ["Farm weight report", "06:00"],
-                    ["House weight report", "06:00"],
-                    ["Pen weight report", "08:00"],
-                    ["Farm weight report (female,male)", "08:00"],
-                    ["Farm weight report (female,male)", "08:00"],
-                    ["Pen weight report (female,male)", "08:00"],
-                    ["Farm silo report", "06:00"],
-                    ["Today's farm weight report", "06:00"],
-                    ["Today's house weight report", "06:00"],
-                    ["Today's pen weight report", "06:00"],
+                    [t("setting.farm_weight_report"), "06:00"],
+                    [t("setting.house_weight_report"), "06:00"],
+                    [t("setting.pen_weight_report"), "08:00"],
+                    [t("setting.farm_weight_report_female_male"), "08:00"],
+                    [t("setting.house_weight_report_female_male"), "08:00"],
+                    [t("setting.pen_weight_report_female_male"), "08:00"],
+                    [t("setting.farm_silo_report"), "06:00"],
+                    [t("setting.Today's_farm_weight_report"), "06:00"],
+                    [t("setting.Today's_house_weight_report"), "06:00"],
+                    [t("setting.Today's_pen_weight_report"), "06:00"],
                   ].map(([type, time], index) => (
                     <tr
                       key={index}
@@ -129,31 +130,31 @@ const Notification = () => {
           {activeTab === "alarm" && (
             <div className="space-y-2">
               <h3 className="font-semibold text-sm md:text-md dark:text-gray-300">
-                Alarm & Warning
+                {t("setting.alarmWarning")}
               </h3>
               <table className="min-w-full text-sm md:text-md border-collapse rounded-xl overflow-hidden mt-3">
                 <thead className="bg-gray-400 dark:bg-[#374151] text-white">
                   <tr>
                     <th className="text-left text-xs px-4 py-2 border-b border-white">
-                      Warning Message
+                      {t("setting.warning_message")}
                     </th>
                     <th className="text-center text-xs px-4 py-3 border-b border-white">
-                      Enable
+                      {t("setting.enable")}
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                   {[
-                    ["Warning when start crop."],
-                    ["Warning when calibrate device"],
-                    ["Warning when underweight"],
+                    [t("setting.warning_when_start_crop")],
+                    [t("setting.warning_when_calibrate_device")],
+                    [t("setting.warning_when_underweight")],
                     [
-                      "Warning when it's time to adjust the height of the scale",
+                      t("setting.warning_when_it's_time_to_adjust_the_height_of_the_scale"),
                     ],
-                    ["Warning when the slio is refilled"],
-                    ["Warning when the slio is usage"],
-                    ["Warning when the slio low level"],
-                    ["Warning when the slio low level (repeat)"],
+                    [t("setting.warning_when_the_slio_is_refilled")],
+                    [t("setting.warning_when_the_slio_is_usage")],
+                    [t("setting.warning_when_the_slio_low_level")],
+                    [t("setting.warning_when_the_slio_low_level_repeat")],
                   ].map(([type], index) => (
                     <tr
                       key={index}
@@ -182,13 +183,13 @@ const Notification = () => {
                 <thead className="bg-gray-400 dark:bg-[#374151] text-white">
                   <tr>
                     <th className="text-left text-xs px-4 py-2 border-b border-white">
-                      Type
+                      {t("setting.type")}
                     </th>
                     <th className="text-center text-xs px-4 py-3 border-b border-white">
-                      Delay Time (min)
+                      {t("setting.delay_time_min")}
                     </th>
                     <th className="text-center text-xs px-4 py-3 border-b border-white">
-                      Enable
+                      {t("setting.enable")}
                     </th>
                   </tr>
                 </thead>
@@ -232,16 +233,16 @@ const Notification = () => {
           {activeTab === "language" && (
             <div className="space-y-4">
               <h3 className="font-semibold text-sm md:text-md dark:text-gray-300">
-                Message Language
+                {t("setting.messageLanguage")}
               </h3>
               <table className=" min-w-full text-sm md:text-md border-collapse rounded-xl overflow-hidden mt-3">
                 <thead className="bg-gray-400 dark:bg-[#374151] text-white">
                   <tr>
                     <th className="text-left text-xs px-4 py-2 border-b border-white">
-                      Language{" "}
+                      {t("setting.language")}{" "}
                     </th>
                     <th className="text-center text-xs px-4 py-3 border-b border-white">
-                      Enable
+                      {t("setting.enable")}
                     </th>
                   </tr>
                 </thead>
@@ -279,7 +280,7 @@ const Notification = () => {
 
               <div className="space-y-2">
                 <h3 className="font-semibold text-sm md:text-md dark:text-gray-200 border-b border-gray-300 pb-1">
-                  Notification
+                  {t("setting.notification")}
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -320,7 +321,7 @@ const Notification = () => {
             >
               <span className="flex items-center text-sm">
                 <FaSave className="mr-2" />
-                Save Changes
+                {t("profile.saveChanges")}
               </span>
             </button>
           </div>

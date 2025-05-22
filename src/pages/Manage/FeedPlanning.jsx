@@ -4,12 +4,15 @@ import usePersistentTab from "../../context/usePersistentTab";
 import { useTranslation } from "react-i18next";
 import { RiFolderUploadFill } from "react-icons/ri";
 import { HiFolderDownload } from "react-icons/hi";
+import ExcelJS from "exceljs";
+import { saveAs } from "file-saver";
+import { toast } from "react-toastify";
 
 const FeedPlanning = () => {
   const farmCode = localStorage.getItem("selectedFarmCode");
   const { t } = useTranslation();
 
-  const { selectPlanningList, getFeedPlanningDetail, feedPlanningDetails } =
+  const { selectPlanningList, getFeedPlanningList, getFeedPlanningDetail, feedPlanningDetails } =
     useFarmStore();
 
   const [selectedFeedPlan, setSelectedFeedPlan] = usePersistentTab(
@@ -17,19 +20,68 @@ const FeedPlanning = () => {
     ""
   );
 
-  useEffect(() => {
-    const fetchBreedStandardDetail = async () => {
-      if (selectedFeedPlan && farmCode) {
-        console.log(
-          "🚀 Fetching Feed Planning Details:",
-          selectedFeedPlan,
-          farmCode
-        );
-        await getFeedPlanningDetail(farmCode, selectedFeedPlan);
-      }
+
+  const exportToExcel = async () => {
+  if (feedPlanningDetails.length === 0) {
+    toast.error(t("feedPlan.noData")); // แจ้งเตือนถ้าไม่มีข้อมูล
+    return;
+  }
+
+  const workbook = new ExcelJS.Workbook();
+  const worksheet = workbook.addWorksheet(t("feedPlan.title"));
+
+  // สร้าง Header
+  worksheet.columns = [
+    { header: t("feedPlan.table.day"), key: "Day", width: 15 },
+    { header: t("feedPlan.table.formular1"), key: "FormulaSilo1", width: 20 },
+    { header: t("feedPlan.table.formular2"), key: "FormulaSilo2", width: 20 },
+    { header: t("feedPlan.table.density"), key: "Dansity", width: 15 },
+    { header: t("feedPlan.table.percentbag"), key: "PercentBags", width: 20 },
+  ];
+
+  // เพิ่มข้อมูล
+  feedPlanningDetails.forEach((item) => {
+    worksheet.addRow(item);
+  });
+
+  // ใส่สีให้ Header
+  worksheet.getRow(1).eachCell((cell) => {
+    cell.fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "FFCCE5FF" },
     };
-    fetchBreedStandardDetail();
-  }, [selectedFeedPlan, farmCode]);
+    cell.font = { bold: true, color: { argb: "FF000000" } };
+    cell.alignment = { vertical: "middle", horizontal: "center" };
+  });
+
+  // สร้าง buffer และ save
+  const buffer = await workbook.xlsx.writeBuffer();
+  const blob = new Blob([buffer], {
+    type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  });
+  saveAs(blob, `${t("feedPlan.title")}.xlsx`);
+};
+
+  useEffect(() => {
+  const fetchPlanningList = async () => {
+    if (farmCode) {
+      console.log("📥 Loading planning list for farm:", farmCode);
+      await getFeedPlanningList(farmCode);
+    }
+  };
+  fetchPlanningList();
+}, [farmCode]);
+
+  useEffect(() => {
+  const fetchFeedPlanningDetail = async () => {
+    if (selectedFeedPlan && farmCode) {
+      console.log("📥 Loading Feed Planning Detail:", selectedFeedPlan, farmCode);
+      await getFeedPlanningDetail(farmCode, selectedFeedPlan); // ✅ ใช้ getFeedPlanningDetail
+    }
+  };
+  fetchFeedPlanningDetail();
+}, [selectedFeedPlan, farmCode]);
 
   return (
     <div className="w-full text-left bg-white dark:bg-gray-800 px-4 lg:px-10 lg:py-4 rounded-2xl shadow-md ">
@@ -63,7 +115,9 @@ const FeedPlanning = () => {
                 className="hidden"
               />
             </label>
-            <button className="flex text-xs md:text-sm items-center justify-center px-3 py-2 bg-[#A1C8FE] dark:bg-[#1DCD9F] text-white hover:bg-[#82A9F4] dark:hover:bg-[#17B78C] rounded-lg cursor-pointer transition w-auto gap-2">
+            <button 
+            onClick={exportToExcel}
+            className="flex text-xs md:text-sm items-center justify-center px-3 py-2 bg-[#A1C8FE] dark:bg-[#1DCD9F] text-white hover:bg-[#82A9F4] dark:hover:bg-[#17B78C] rounded-lg cursor-pointer transition w-auto gap-2">
               <HiFolderDownload size={22} />
               {t("menu.download")}
             </button>

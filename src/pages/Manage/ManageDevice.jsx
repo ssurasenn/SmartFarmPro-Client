@@ -5,6 +5,7 @@ import { useDarkMode } from "../../context/DarkModeContext";
 import { toast } from "react-toastify";
 import useFarmStore from "../../store/smartfarm-store";
 import RegisterForm from "../../components/house/RegisterFrom";
+import { useTranslation } from "react-i18next";
 
 
 // Select styles
@@ -87,6 +88,7 @@ const ManageDevice = () => {
   label: farm.FarmName,
 }));
 
+  const { t } = useTranslation();
   // console.log("selectedFarm---->>>",selectedFarm)
   const handleAddOrUpdate = () => {
     if (!form.mode || !form.role || !form.device_id) {
@@ -145,7 +147,7 @@ const ManageDevice = () => {
   return (
     <div className="p-6 space-y-6">
       <div className="flex items-center justify-between px-6">
-        <h1 className="text-xl font-bold text-gray-700 dark:text-white">Manage Device</h1>
+        <h1 className="text-xl font-bold text-gray-700 dark:text-white">{t("manage_device.title")}</h1>
         <button className="bg-[#A1C8FE] dark:bg-[#1DCD9F] text-white dark:hover:bg-[#17B78C] hover:bg-blue-400 px-3 py-1 rounded-lg shadow-md cursor-pointer">+</button>
       </div>
 
@@ -169,13 +171,13 @@ const ManageDevice = () => {
         <table className="min-w-full text-sm border-collapse shadow-md rounded-xl overflow-hidden">
           <thead className="bg-[#A1C8FE] dark:bg-gray-700 text-white">
             <tr className="whitespace-nowrap">
-              <th className="px-4 py-3 text-center ">Mode</th>
-              <th className="px-4 py-3 text-center ">Device ID</th>
-              <th className="px-4 py-3 text-center ">Mfg. Date</th>
-              <th className="px-4 py-3 text-center ">Exp. Date</th>
-              <th className="px-4 py-3 text-center ">Last Connect</th>
-              <th className="px-4 py-3 text-center ">Device ref.</th>
-              <th className="px-4 py-3 text-center ">View Indicator</th>
+              <th className="px-4 py-3 text-center ">{t("manage_device.Mode")}</th>
+              <th className="px-4 py-3 text-center ">{t("manage_device.Device_ID")}</th>
+              <th className="px-4 py-3 text-center ">{t("manage_device.Mfg_Date")}</th>
+              <th className="px-4 py-3 text-center ">{t("manage_device.Exp_Date")}</th>
+              <th className="px-4 py-3 text-center ">{t("manage_device.Last_Connect")}</th>
+              <th className="px-4 py-3 text-center ">{t("manage_device.Device_Ref")}</th>
+              <th className="px-4 py-3 text-center ">{t("manage_device.View_Indicator")}</th>
             </tr>
           </thead>
           <tbody className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 divide-y divide-gray-200 dark:divide-gray-700">
@@ -209,7 +211,7 @@ const ManageDevice = () => {
             {devices.length === 0 && (
               <tr>
                 <td colSpan="7" className="text-center py-6 text-gray-400 dark:text-gray-500 italic">
-                  No devices added yet.
+                  {t("manage_device.noDevices_added_yet")}
                 </td>
               </tr>
             )}

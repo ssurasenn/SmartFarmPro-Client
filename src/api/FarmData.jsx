@@ -160,31 +160,7 @@ export const getBreedStandardList = async (farmCode) => {
     return { success: false, message: error.message };
   }
 };
-export const getfeedPlanningList = async (farmCode) => {
-  try {
-    const token = localStorage.getItem("token"); // ดึง token ที่เก็บไว้ใน localStorage
 
-    const res = await axios.post(
-      // "https://smartfarmpro.com/v4/api/private/farmfeedplanninglist",
-      `${BASE_URL}/api/private/farmfeedplanninglist`,
-      {
-        FarmCode: farmCode,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-
-    console.log("res List FeedPlanning  ---->>>>", res);
-    // return  { success: true, data: res.data?.data || [] };
-    return { success: true, data: res.data?.data || [] };
-  } catch (error) {
-    // console.error("Error in settingProduction:", error, "farmcode------>>>",farmCode);
-    return { success: false, message: error.message };
-  }
-};
 export const getBreedStandardDetails = async (farmCode, breedStandard) => {
   try {
     const token = localStorage.getItem("token"); // ดึง token ที่เก็บไว้ใน localStorage
@@ -217,6 +193,31 @@ export const getBreedStandardDetails = async (farmCode, breedStandard) => {
   }
 };
 
+export const getfeedPlanningList = async (farmCode) => {
+  try {
+    const token = localStorage.getItem("token"); // ดึง token ที่เก็บไว้ใน localStorage
+
+    const res = await axios.post(
+      // "https://smartfarmpro.com/v4/api/private/farmfeedplanninglist",
+      `${BASE_URL}/api/private/farmfeedplanninglist`,
+      {
+        FarmCode: farmCode,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    console.log("res List FeedPlanning  ---->>>>", res);
+    // return  { success: true, data: res.data?.data || [] };
+    return { success: true, data: res.data?.data || [] };
+  } catch (error) {
+    // console.error("Error in settingProduction:", error, "farmcode------>>>",farmCode);
+    return { success: false, message: error.message };
+  }
+};
 export const getFeedPlanningDetails = async (farmCode, feedPlanning) => {
   try {
     const token = localStorage.getItem("token"); // ดึง token ที่เก็บไว้ใน localStorage
@@ -333,7 +334,7 @@ export const SettingEditFlock = async (flockArray, farmCode, cropCode) => {
 
   const houseDetail = flockArray.map((item) => ({
     HouseCode: item.HouseCode,
-    FlockName: item.FlockName ?? "Flock 1",
+    FlockName: item.FlockName ?? "",
     DateStart: item.DateStart
       ? dayjs(item.DateStart).format("YYYY-MM-DD 00:00:00")
       : "2025-01-01 00:00:00",
@@ -344,12 +345,12 @@ export const SettingEditFlock = async (flockArray, farmCode, cropCode) => {
     AgeOfStart: Number(item.AgeOfStart) || 0, // ไม่ใช้ 0
     FeedPlanning: item.FeedPlanning || "-",
     FocusCatch: item.FocusCatch ?? 1,
-    BreedStandard1: item.BreedStandard1 || "ArborAcres MALE",
-    Number1: Number(item.Number1) || 1000,
+    BreedStandard1: item.BreedStandard1 || "",
+    Number1: Number(item.Number1) || "",
     DateCatch: item.DateCatch
       ? dayjs(item.DateCatch).format("YYYY-MM-DD 00:00:00")
       : null,
-    SlaughterhouseWeight: Number(item.SlaughterhouseWeight) || 1000,
+    SlaughterhouseWeight: Number(item.SlaughterhouseWeight) || "",
   }));
 
   const payload = {

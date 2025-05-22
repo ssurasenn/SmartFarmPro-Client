@@ -1,11 +1,26 @@
 {
   "login": {
-    "title": "ยินดีต้อนรับกลับ",
-    "username": "ชื่อผู้ใช้",
+    "accountLogin": "เข้าสู่ระบบบัญชี",
+    "email_address": "อีเมล",
     "password": "รหัสผ่าน",
-    "submit": "เข้าสู่ระบบ",
-    "loading": "กำลังเข้าสู่ระบบ...",
-    "error": "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง"
+    "Login": "เข้าสู่ระบบ",
+    "remember_me": "จดจำฉันไว้",
+    "forgot_your_password?" : "ลืมรหัสผ่าน?",
+    "loading": "กำลังลงชื่อเข้า...",
+    "learn_more_about_us_at" : "เรียนรู้เพิ่มเติมเกี่ยวกับเรา",
+    "error": "อีเมลหรือรหัสผ่านไม่ถูกต้อง"
+  },
+  "profile" : {
+    "myProfile": "โปรไฟล์ของฉัน",
+    "changePassword": "เปลี่ยนรหัสผ่าน",
+    "setting_profile": "ตั้งค่าโปรไฟล์",
+    "logout": "ออกจากระบบ",
+    "back": "ย้อนกลับ",
+    "upload_new_photo" : "อัพโหลดรูปภาพใหม่",
+    "current_password" : "รหัสผ่านปัจจุบัน",
+    "new_password" : "รหัสผ่านใหม่",
+    "confirm_password" : "ยืนยันรหัสผ่าน",
+    "saveChanges" : "บันทึกการเปลี่ยนแปลง"
   },
   "menu": {
     "overview": "ภาพรวม",
@@ -43,6 +58,17 @@
     "manageFarm": "จัดการฟาร์ม",
     "manageHouse": "จัดการโรงเรือน",
     "tabSettingProduction": "ตั้งค่าการโปรดักชั่น"
+  },
+  "manage_device" : {
+    "title": "จัดการอุปกรณ์",
+    "Mode": "โหมด",
+    "Device_ID": "รหัสอุปกรณ์",
+    "Mfg_Date": "วันที่ผลิต",
+    "Exp_Date": "วันหมดอายุ",
+    "Last_Connect": "เชื่อมต่อล่าสุด",
+    "Device_Ref": "อ้างอิงอุปกรณ์",
+    "View_Indicator": "ดูข้อมูลจากเครื่องบ่งบอกสถานะ",
+    "noDevices_added_yet" : "ยังไม่มีอุปกรณ์ที่ถูกเพิ่ม"
   },
   "upload" : {
     "title" : "อัพโหลด",
@@ -137,7 +163,40 @@
       "nodata_description" : "ไม่มีข้อมูลที่สามารถบันทึกได้ กรุณาเพิ่มข้อมูลเพิ่มเติม",
       "max_weight" : "น้ำหนักไม่ควรเกิน {{max}} กรัม",
       "must_be_greater_than_start" : "วันที่จับต้องมากกว่าวันเริ่มต้น!",
-      "must_be_less_than_the_end" : "วันที่จับต้องน้อยกว่าวันสิ้นสุด!"
+      "must_be_less_than_the_end" : "วันที่จับต้องน้อยกว่าวันสิ้นสุด!",
+      "fill_weight" : "กรุณากรอกน้ำหนักโรงเชือดให้กับ: "
     }
+  },
+  "setting": {
+    "summaryReport": "รายงานสรุป",
+    "alarmWarning": "สัญญาณเตือนและคำเตือน",
+    "messageLanguage": "ภาษาข้อความ",
+    "notification": "การแจ้งเตือน",
+    "language": "ภาษา",
+    "farmReort": "รายงานฟาร์ม",
+    "reportType": "ประเภทของรายงาน",
+    "time": "เวลา",
+    "type": "ประเภท",
+    "enable": "เปิดใช้งาน",
+    "delay_time_min": "เวลาหน่วง (นาที)",
+    "farm_weight_report": "รายงานน้ำหนักฟาร์ม",
+    "house_weight_report": "รายงานน้ำหนักโรงเรือน",
+    "pen_weight_report": "รายงานน้ำหนักคอก",
+    "farm_weight_report_female_male": "รายงานน้ำหนักฟาร์ม (เพศหญิง/เพศชาย)",
+    "house_weight_report_female_male": "รายงานน้ำหนักโรงเรือน (เพศหญิง/เพศชาย)",
+    "pen_weight_report_female_male": "รายงานน้ำหนักคอก (เพศหญิง/เพศชาย)",
+    "farm_silo_report": "รายงานไซโลฟาร์ม",
+    "Today's_farm_weight_report": "รายงานน้ำหนักฟาร์มวันนี้",
+    "Today's_house_weight_report": "รายงานน้ำหนักโรงเรือนวันนี้",
+    "Today's_pen_weight_report": "รายงานน้ำหนักคอกวันนี้",
+    "warning_message": "ข้อความเตือน",
+    "warning_when_start_crop": "แจ้งเตือนเมื่อเริ่มต้นการปลูกพืช",
+    "warning_when_calibrate_device": "แจ้งเตือนเมื่อปรับเทียบอุปกรณ์",
+    "warning_when_underweight": "แจ้งเตือนเมื่อมีน้ำหนักต่ำกว่ามาตรฐาน",
+    "warning_when_it's_time_to_adjust_the_height_of_the_scale": "แจ้งเตือนเมื่อถึงเวลาปรับความสูงของเครื่องชั่ง",
+    "warning_when_the_slio_is_refilled": "แจ้งเตือนเมื่อไซโลถูกเติมใหม่",
+    "warning_when_the_slio_is_usage": "แจ้งเตือนเมื่อไซโลถูกใช้งาน",
+    "warning_when_the_slio_low_level": "แจ้งเตือนเมื่อระดับไซโลต่ำ",
+    "warning_when_the_slio_low_level_repeat": "แจ้งเตือนเมื่อระดับไซโลต่ำ (แจ้งซ้ำ)"
   }
 }

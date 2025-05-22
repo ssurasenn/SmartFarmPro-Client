@@ -1,11 +1,26 @@
 {
   "login": {
-    "title": "欢迎回来",
-    "username": "用户名",
+    "accountLogin": "账户登录",
+    "email_address": "电子邮件地址",
     "password": "密码",
-    "submit": "登录",
-    "loading": "正在登录...",
-    "error": "用户名或密码不正确"
+    "Login": "登录",
+    "remember_me": "记住我",
+    "forgot_your_password?" : "忘记密码?",
+    "loading": "登录中...",
+    "learn_more_about_us_at" : "了解更多关于我们",
+    "error": "电子邮件或密码错误"
+  },
+  "profile" : {
+    "myProfile": "我的资料",
+    "changePassword": "更改密码",
+    "setting_profile": "设置资料",
+    "logout": "登出",
+    "back": "返回",
+    "upload_new_photo" : "上传新照片",
+    "current_password" : "当前密码",
+    "new_password" : "新密码",
+    "confirm_password" : "确认密码",
+    "saveChanges" : "保存更改"
   },
   "menu": {
     "overview": "概览",
@@ -42,6 +57,17 @@
     "manageFarm": "管理农场",
     "manageHouse": "管理房屋",
     "tabSettingProduction": "生产设置"
+  },
+  "manage_device" : {
+    "title": "设备管理",
+    "Mode": "模式",
+    "Device_ID": "设备编号",
+    "Mfg_Date": "生产日期",
+    "Exp_Date": "到期日期",
+    "Last_Connect": "最近连接",
+    "Device_Ref": "设备参考",
+    "View_Indicator": "查看指示器",
+    "noDevices_added_yet" : "尚未添加设备"
   },
   "upload": {
     "title": "上传",
@@ -135,7 +161,41 @@
       "nodata_description": "没有可保存的数据。请添加更多数据。",
       "max_weight" : "最大重量不得超过{{max}}克",
       "must_be_greater_than_start" : "抓捕日期必须晚于开始日期!",
-      "must_be_less_than_the_end" : "抓捕日期必须早于结束日期!"
+      "must_be_less_than_the_end" : "抓捕日期必须早于结束日期!",
+      "fill_weight" : "请为屠宰场输入重量 : "
+      
     }
+  },
+  "setting": {
+    "summaryReport": "总结报告",
+    "alarmWarning": "警报和警告",
+    "messageLanguage": "消息语言",
+    "notification": "通知",
+    "language": "语言",
+    "farmReort": "农场报告",
+    "reportType": "报告类型",
+    "time": "时间",
+    "type": "类型",
+    "enable": "启用",
+    "delay_time_min": "延迟时间（分钟）",
+    "farm_weight_report": "农场重量报告",
+    "house_weight_report": "房舍重量报告",
+    "pen_weight_report": "围栏重量报告",
+    "farm_weight_report_female_male": "农场重量报告（雌性/雄性）",
+    "house_weight_report_female_male": "房舍重量报告（雌性/雄性）",
+    "pen_weight_report_female_male": "围栏重量报告（雌性/雄性）",
+    "farm_silo_report": "农场筒仓报告",
+    "Today's_farm_weight_report": "今日农场重量报告",
+    "Today's_house_weight_report": "今日房舍重量报告",
+    "Today's_pen_weight_report": "今日围栏重量报告",
+    "warning_message": "警告信息",
+    "warning_when_start_crop": "开始种植时警告",
+    "warning_when_calibrate_device": "校准设备时警告",
+    "warning_when_underweight": "重量不足时警告",
+    "warning_when_it's_time_to_adjust_the_height_of_the_scale": "需要调整秤高时警告",
+    "warning_when_the_slio_is_refilled": "筒仓补充时警告",
+    "warning_when_the_slio_is_usage": "筒仓使用时警告",
+    "warning_when_the_slio_low_level": "筒仓低位时警告",
+    "warning_when_the_slio_low_level_repeat": "筒仓低位（重复）时警告"
   }
 }

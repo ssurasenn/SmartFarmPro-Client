@@ -49,7 +49,7 @@ const BtnChangeLanguage = () => {
   return (
     <div className="relative" ref={dropdownRef}>
       <div
-        className="flex items-center gap-2 cursor-pointer p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition"
+        className="flex items-center gap-2 cursor-pointer p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition"
         onClick={() => setOpen((prev) => !prev)}
       >
         <img

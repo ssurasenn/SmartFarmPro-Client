@@ -19,7 +19,7 @@ const OverviewFarm = () => {
           className={`cursor-pointer pb-1 border-b-2 ${
             selectedTab === "production"
               ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
-              : "border-transparent text-gray-500"
+              : "border-transparent text-gray-600 dark:text-gray-200"
           }`}
           onClick={() => setSelectedTab("production")}
         >
@@ -29,7 +29,7 @@ const OverviewFarm = () => {
           className={`cursor-pointer pb-1 border-b-2 ${
             selectedTab === "Farm Weight"
               ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
-              : "border-transparent text-gray-500"
+              : "border-transparent text-gray-600 dark:text-gray-200"
           }`}
           onClick={() => setSelectedTab("Farm Weight")}
         >

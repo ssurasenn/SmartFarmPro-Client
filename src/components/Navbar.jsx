@@ -123,9 +123,9 @@ const Navbar = ({ toggleSidebar, openMenu, setOpenMenu }) => {
                   isDarkMode ? "bg-[#1DCD9F] justify-end" : "bg-gray-700 justify-start"
                 }`}
               >
-                <div className="flex items-center justify-center w-5 h-5 bg-white rounded-full shadow-md">
+                <div className="flex items-center justify-center w-5 h-5 bg-white rounded-full">
                   {isDarkMode ? (
-                    <MdSunny size={15} className="text-[#1DCD9F]" />
+                    <MdSunny size={15} className="text-[#1DCD9F] " />
                   ) : (
                     <FaMoon size={15} className="text-gray-700" />
                   )}

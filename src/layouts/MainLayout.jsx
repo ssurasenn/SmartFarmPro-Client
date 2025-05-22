@@ -45,8 +45,7 @@ const MainLayout = () => {
 
         {/* Main Content */}
         <main
-          className="bg-[#E6ECFF] flex-1 ml-0 md:ml-64 h-[calc(100vh-4rem)] overflow-y-auto p-5 lg:px-10 lg:py-5 transition-all duration-300 rounded-2xl
-        dark:bg-[#4A4947]"
+          className="bg-gradient-to-b from-[#c5ddfe] to-white dark:from-gray-700 dark:to-gray-300 flex-1 ml-0 md:ml-64 h-[calc(100vh-4rem)] overflow-y-auto p-4 lg:px-8 lg:py-5 transition-all duration-300 rounded-2xl"
         >
         {/* <main
           className="bg-[#E6ECFF] flex-1 ml-0  overflow-y-auto p-5 lg:px-10 lg:py-5 transition-all duration-300 rounded-2xl

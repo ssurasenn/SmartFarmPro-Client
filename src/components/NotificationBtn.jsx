@@ -40,7 +40,7 @@ const NotificationBtn = () => {
       <IoNotifications
         size={29}
         onClick={() => setOpen(!open)}
-        className="text-gray-700 transition-transform duration-300 group-hover:animate-wiggle group-hover:scale-110 cursor-pointer"
+        className="text-gray-700 transition-transform hover:text-gray-500 dark:text-gray-600 dark:hover:text-gray-400 hover:animate-wiggle duration-300 group-hover:scale-125 cursor-pointer"
       />
       {count > 0 && (
         <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">

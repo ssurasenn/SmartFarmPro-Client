@@ -931,10 +931,39 @@ const CropTable = ({
         </table>
       </div>
 
-      {isEditable && isEditing && (
+      {/* {isEditable && isEditing && (
         <div className="mt-4 flex justify-end">
           <button
             onClick={onSave}
+            className="flex items-center gap-1 px-2 py-1 bg-[#A1C8FE] hover:bg-[#82A9F4] dark:bg-[#1DCD9F] text-white text-sm md:text-base rounded-xl shadow dark:hover:bg-[#169976] cursor-pointer"
+          >
+            <MdOutlineSaveAlt />
+            {t("settingProduction.save_changes")}
+          </button>
+        </div>
+      )} */}
+      {isEditable && isEditing && (
+        <div className="mt-4 flex justify-end">
+          <button
+            onClick={() => {
+              const emptyWeightRows = editableData.filter(
+                (row) =>
+                  row.SlaughterhouseWeight === "" ||
+                  row.SlaughterhouseWeight === null ||
+                  row.SlaughterhouseWeight === undefined
+              );
+
+              if (emptyWeightRows.length > 0) {
+                const houseNames = emptyWeightRows
+                  .map((row) => row.HouseName)
+                  .join(", ");
+                toast.error(`${t("settingProduction.toast.fill_weight")} ${houseNames}`);
+
+                return;
+              }
+
+              onSave();
+            }}
             className="flex items-center gap-1 px-2 py-1 bg-[#A1C8FE] hover:bg-[#82A9F4] dark:bg-[#1DCD9F] text-white text-sm md:text-base rounded-xl shadow dark:hover:bg-[#169976] cursor-pointer"
           >
             <MdOutlineSaveAlt />
@@ -982,7 +1011,6 @@ const renderCell = (
   const isRowEditing = editingRows.includes(index);
 
   return fields.map(({ key }, idx) => {
-    
     return (
       <td
         key={idx}

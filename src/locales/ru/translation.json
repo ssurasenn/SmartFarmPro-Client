@@ -1,17 +1,43 @@
 {
   "login": {
-    "title": "С возвращением",
-    "username": "Имя пользователя",
+    "accountLogin": "Вход в аккаунт",
+    "email_address": "Адрес электронной почты",
     "password": "Пароль",
-    "submit": "Войти",
-    "loading": "Вход в систему...",
-    "error": "Неверное имя пользователя или пароль"
+    "Login": "Войти",
+    "remember_me": "Запомнить меня",
+    "forgot_your_password?" : "Забыли пароль?",
+    "loading": "Iniciando sesión...",
+    "learn_more_about_us_at" : "Узнать больше о нас",
+    "error": "Неверный адрес электронной почты или пароль"
+  },
+  "profile" : {
+    "myProfile": "Мой профиль",
+    "changePassword": "Изменить пароль",
+    "setting_profile": "Настройка профиля",
+    "logout": "Выход",
+    "back": "Назад",
+    "upload_new_photo" : "Загрузить новое фото",
+    "current_password" : "Текущий пароль",
+    "new_password" : "Новый пароль",
+    "confirm_password" : "Подтвердить пароль",
+    "saveChanges" : "Сохранить изменения"
   },
   "management": {
     "title": "Управление",
     "manageFarm": "Управление фермой",
     "manageHouse": "Управление домом",
     "tabSettingProduction": "Настройки производства"
+  },
+  "manage_device" : {
+    "title": "Управление устройством",
+    "Mode": "Режим",
+    "Device_ID": "ID устройства",
+    "Mfg_Date": "Дата производства",
+    "Exp_Date": "Дата окончания",
+    "Last_Connect": "Последнее подключение",
+    "Device_Ref": "Ссылка на устройство",
+    "View_Indicator": "Показатель просмотра",
+    "noDevices_added_yet" : "Пока нет добавленных устройств"
   },
   "upload": {
     "title": "Загрузка",
@@ -135,7 +161,40 @@
       "nodata_description": "Нет данных для сохранения. Добавьте больше данных.",
       "max_weight" : "Максимальная масса не должна превышать {{max}} грамм",
       "must_be_greater_than_start" : "Дата отлова должна быть позже даты начала!",
-      "must_be_less_than_the_end" : "Дата отлова должна быть раньше даты окончания!"
+      "must_be_less_than_the_end" : "Дата отлова должна быть раньше даты окончания!",
+      "fill_weight" : "Пожалуйста, введите вес для бойни: "
     }
+  },
+  "setting": {
+    "summaryReport": "Сводный отчет",
+    "alarmWarning": "Тревога и предупреждение",
+    "messageLanguage": "Язык сообщений",
+    "notification": "Уведомление",
+    "language": "Язык",
+    "farmReort": "Отчет фермы",
+    "reportType": "Тип отчета",
+    "time": "Время",
+    "type": "Тип",
+    "enable": "Включить",
+    "delay_time_min": "Время задержки (мин)",
+    "farm_weight_report": "Отчет о весе фермы",
+    "house_weight_report": "Отчет о весе дома",
+    "pen_weight_report": "Отчет о весе загона",
+    "farm_weight_report_female_male": "Отчет о весе фермы (самки/самцы)",
+    "house_weight_report_female_male": "Отчет о весе дома (самки/самцы)",
+    "pen_weight_report_female_male": "Отчет о весе загона (самки/самцы)",
+    "farm_silo_report": "Отчет о силосе фермы",
+    "Today's_farm_weight_report": "Отчет о весе фермы за сегодня",
+    "Today's_house_weight_report": "Отчет о весе дома за сегодня",
+    "Today's_pen_weight_report": "Отчет о весе загона за сегодня",
+    "warning_message": "Предупреждающее сообщение",
+    "warning_when_start_crop": "Предупреждение при начале выращивания",
+    "warning_when_calibrate_device": "Предупреждение при калибровке устройства",
+    "warning_when_underweight": "Предупреждение при недостаточном весе",
+    "warning_when_it's_time_to_adjust_the_height_of_the_scale": "Предупреждение при необходимости корректировки высоты весов",
+    "warning_when_the_slio_is_refilled": "Предупреждение при дозаправке силоса",
+    "warning_when_the_slio_is_usage": "Предупреждение при использовании силоса",
+    "warning_when_the_slio_low_level": "Предупреждение при низком уровне силоса",
+    "warning_when_the_slio_low_level_repeat": "Предупреждение при низком уровне силоса (повторное)"
   }
 }

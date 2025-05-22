@@ -1,11 +1,26 @@
 {
   "login": {
-    "title": "Bienvenido de nuevo",
-    "username": "Nombre de usuario",
+    "accountLogin": "Inicio de sesión",
+    "email_address": "Correo electrónico",
     "password": "Contraseña",
-    "submit": "Iniciar sesión",
+    "Login": "Iniciar sesión",
+    "remember_me": "Recuérdame",
+    "forgot_your_password?": "Olvidaste tu contraseña?",
     "loading": "Iniciando sesión...",
-    "error": "Nombre de usuario o contraseña incorrectos"
+    "learn_more_about_us_at": "Más información sobre nosotros en",
+    "error": "Correo electrónico o contraseña incorrectos"
+  },
+  "profile": {
+    "myProfile": "Mi perfil",
+    "changePassword": "Cambiar contraseña",
+    "setting_profile": "Configuración de perfil",
+    "logout": "Cerrar sesión",
+    "back": "Atrás",
+    "upload_new_photo": "Subir nueva foto",
+    "current_password": "Contraseña actual",
+    "new_password": "Nueva contraseña",
+    "confirm_password": "Confirmar contraseña",
+    "saveChanges": "Guardar cambios"
   },
   "menu": {
     "overview": "Resumen",
@@ -42,6 +57,17 @@
     "manageFarm": "Gestionar granja",
     "manageHouse": "Gestionar casa",
     "tabSettingProduction": "Configuración de producción"
+  },
+  "manage_device": {
+    "title": "Gestionar dispositivo",
+    "Mode": "Modo",
+    "Device_ID": "ID del dispositivo",
+    "Mfg_Date": "Fecha de producción",
+    "Exp_Date": "Fecha de expiración",
+    "Last_Connect": "Conexión reciente",
+    "Device_Ref": "Referencia del dispositivo",
+    "View_Indicator": "Indicador de visualización",
+    "noDevices_added_yet": "Aun no se han agregado dispositivos"
   },
   "upload": {
     "title": "Subir",
@@ -121,7 +147,7 @@
     "select_breed": "Seleccionar raza",
     "toast": {
       "startCrop": "Ciclo de producción iniciado",
-      "no_changes_detected" : "No se detectaron cambios",
+      "no_changes_detected": "No se detectaron cambios",
       "startProductionerror": "Error al iniciar el ciclo de producción",
       "Please_select_the_crop_start_date": "Por favor, selecciona la fecha de inicio del ciclo de producción",
       "continueCrop": "Ciclo reanudado",
@@ -133,9 +159,43 @@
       "an_error_occurred": "Ocurrio un error",
       "nodata": "No hay datos",
       "nodata_description": "No hay datos para guardar. Agrega mas datos.",
-      "max_weight" : "El peso no debe superar {{max}} gramos",
-      "must_be_greater_than_start" : "La fecha de captura debe ser posterior a la fecha de inicio!",
-      "must_be_less_than_the_end" : "La fecha de captura debe ser anterior a la fecha de finalización!"
+      "max_weight": "El peso no debe superar {{max}} gramos",
+      "must_be_greater_than_start": "La fecha de captura debe ser posterior a la fecha de inicio!",
+      "must_be_less_than_the_end": "La fecha de captura debe ser anterior a la fecha de finalización!",
+      "fill_weight": "Por favor, introduzca el peso del matadero para:"
     }
+  },
+  "setting": {
+    "summaryReport": "Informe resumido",
+    "alarmWarning": "Alarma y advertencia",
+    "messageLanguage": "Idioma del mensaje",
+    "notification": "Notificación",
+    "language": "Idioma",
+    "farmReort": "Informe de la granja",
+    "reportType": "Tipo de informe",
+    "time": "Hora",
+    "type": "Tipo",
+    "enable": "Habilitar",
+    "delay_time_min": "Tiempo de retraso (min)",
+    "farm_weight_report": "Informe de peso de la granja",
+    "house_weight_report": "Informe de peso de la casa",
+    "pen_weight_report": "Informe de peso del corral",
+    "farm_weight_report_female_male": "Informe de peso de la granja (hembra/macho)",
+    "house_weight_report_female_male": "Informe de peso de la casa (hembra/macho)",
+    "pen_weight_report_female_male": "Informe de peso del corral (hembra/macho)",
+    "farm_silo_report": "Informe de silo de la granja",
+    "Today's_farm_weight_report": "Informe de peso de la granja de hoy",
+    "Today's_house_weight_report": "Informe de peso de la casa de hoy",
+    "Today's_pen_weight_report": "Informe de peso del corral de hoy",
+    "warning_message": "Mensaje de advertencia",
+    "warning_when_start_crop": "Advertencia al comenzar el cultivo",
+    "warning_when_calibrate_device": "Advertencia al calibrar el dispositivo",
+    "warning_when_underweight": "Advertencia por bajo peso",
+    "warning_when_it's_time_to_adjust_the_height_of_the_scale": "Advertencia cuando es momento de ajustar la altura de la báscula",
+    "warning_when_the_slio_is_refilled": "Advertencia al rellenar el silo",
+    "warning_when_the_slio_is_usage": "Advertencia al usar el silo",
+    "warning_when_the_slio_low_level": "Advertencia por nivel bajo del silo",
+    "warning_when_the_slio_low_level_repeat": "Advertencia por nivel bajo del silo (repetición)"
   }
+  
 }

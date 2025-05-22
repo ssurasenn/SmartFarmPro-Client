@@ -49,7 +49,7 @@ const ManageFarm = () => {
           className={`cursor-pointer pb-1 border-b-2 text-xs md:text-md lg:text-base ${
             selectedTab === "manage-farm"
               ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
-              : "border-transparent text-gray-500"
+              : "border-transparent text-gray-600 dark:text-gray-200"
           }`}
           onClick={() => setSelectedTab("manage-farm")}
         >
@@ -59,7 +59,7 @@ const ManageFarm = () => {
           className={`cursor-pointer pb-1 border-b-2 text-xs md:text-md lg:text-base ${
             selectedTab === "manage-house"
               ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
-              : "border-transparent text-gray-500"
+              : "border-transparent text-gray-600 dark:text-gray-200"
           }`}
           onClick={() => setSelectedTab("manage-house")}
         >
@@ -69,7 +69,7 @@ const ManageFarm = () => {
           className={`cursor-pointer pb-1 border-b-2 text-xs md:text-md lg:text-base ${
             selectedTab === "setting-production"
               ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
-              : "border-transparent text-gray-500"
+              : "border-transparent text-gray-600 dark:text-gray-200"
           }`}
           onClick={() => setSelectedTab("setting-production")}
         >

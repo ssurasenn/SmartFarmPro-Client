@@ -4,6 +4,9 @@ import usePersistentTab from "../../context/usePersistentTab";
 import { useTranslation } from "react-i18next";
 import { HiFolderDownload } from "react-icons/hi";
 import { RiFolderUploadFill } from "react-icons/ri";
+import * as XLSX from "xlsx";
+import ExcelJS from "exceljs";
+import { saveAs } from "file-saver";
 
 const BreedStandard = () => {
   const farmCode = localStorage.getItem("selectedFarmCode");
@@ -17,6 +20,50 @@ const BreedStandard = () => {
     ""
   );
 
+  
+const exportToExcel = async (data, t) => {
+  const workbook = new ExcelJS.Workbook();
+  const worksheet = workbook.addWorksheet(t("breed.title"));
+
+    if (breedStandardDetails.length === 0) {
+      alert("ไม่มีข้อมูลให้ดาวน์โหลด");
+      return;
+    }
+
+      // กำหนด header พร้อมแปลภาษา
+  worksheet.columns = [
+    { header: t("breed.table.day"), key: "Day", width: 15 },
+    { header: t("breed.table.percentLive"), key: "PercentLive", width: 20 },
+    { header: t("breed.table.dailyIntake"), key: "DailyIntake", width: 20 },
+    { header: t("breed.table.cumIntake"), key: "CumIntake", width: 20 },
+    { header: t("breed.table.bodyWeight"), key: "BodyWeight", width: 20 },
+    { header: t("breed.table.dailyGain"), key: "DailyGain", width: 20 },
+    { header: t("breed.table.fcr"), key: "FCR", width: 15 },
+  ];
+  // เพิ่มข้อมูล
+  data.forEach((item) => {
+    worksheet.addRow(item);
+  });
+
+  // ใส่สีให้ header
+  worksheet.getRow(1).eachCell((cell) => {
+    cell.fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "FFCCE5FF" }, // สีฟ้าอ่อน
+    };
+    cell.font = {
+      bold: true,
+      color: { argb: "FF000000" },
+    };
+    cell.alignment = { vertical: "middle", horizontal: "center" };
+  });
+
+  // สร้างไฟล์และบันทึก
+  const buffer = await workbook.xlsx.writeBuffer();
+  const blob = new Blob([buffer], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+  saveAs(blob, `${t("breed.title")}.xlsx`);
+};
   useEffect(() => {
     const fetchBreedStandardDetail = async () => {
       if (selectedBreed && farmCode) {
@@ -54,7 +101,7 @@ const BreedStandard = () => {
 
           <div className="flex items-center gap-2">
             <label className="inline-flex text-xs md:text-sm items-center justify-center px-3 py-2 bg-[#A1C8FE] dark:bg-[#1DCD9F] text-white hover:bg-[#82A9F4] dark:hover:bg-[#17B78C] rounded-lg cursor-pointer transition w-auto gap-2">
-              <RiFolderUploadFill size={20}/>
+              <RiFolderUploadFill size={20} />
               {t("menu.upload")}
               <input
                 type="file"
@@ -63,8 +110,11 @@ const BreedStandard = () => {
                 className="hidden"
               />
             </label>
-            <button className="inline-flex text-xs md:text-sm items-center justify-center px-3 py-2 bg-[#A1C8FE] dark:bg-[#1DCD9F] text-white hover:bg-[#82A9F4] dark:hover:bg-[#17B78C] rounded-lg cursor-pointer transition w-auto gap-2">
-              <HiFolderDownload size={22} className=" "/>
+            <button
+                onClick={() => exportToExcel(breedStandardDetails, t)}
+              className="inline-flex text-xs md:text-sm items-center justify-center px-3 py-2 bg-[#A1C8FE] dark:bg-[#1DCD9F] text-white hover:bg-[#82A9F4] dark:hover:bg-[#17B78C] rounded-lg cursor-pointer transition w-auto gap-2"
+            >
+              <HiFolderDownload size={22} className=" " />
               {t("menu.download")}
             </button>
           </div>

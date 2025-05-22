@@ -3,9 +3,24 @@
     "accountLogin": "Account Login",
     "email_address": "Email address",
     "password": "Password",
-    "submit": "Login",
+    "Login": "Login",
+    "remember_me": "Remember me",
+    "forgot_your_password?" : "Forgot your password?",
     "loading": "Signing in...",
+    "learn_more_about_us_at" : "Learn more about us at",
     "error": "Incorrect email or password"
+  },
+  "profile" : {
+    "myProfile": "My Profile",
+    "changePassword": "Change Password",
+    "setting_profile": "Setting Profile",
+    "logout": "Logout",
+    "back": "Back",
+    "upload_new_photo" : "Upload new photo",
+    "current_password" : "Current Password",
+    "new_password" : "New Password",
+    "confirm_password" : "Confirm Password",
+    "saveChanges" : "Save Changes"
   },
   "menu": {
     "overview": "Overview",
@@ -46,6 +61,17 @@
     "manageFarm": "Manage Farm",
     "manageHouse": "Manage House",
     "tabSettingProduction": "Setting Production"
+  },
+  "manage_device" : {
+    "title": "Manage Device",
+    "Mode": "Mode",
+    "Device_ID": "Device ID",
+    "Mfg_Date": "Mfg Date",
+    "Exp_Date": "Exp Date",
+    "Last_Connect": "Last Connect",
+    "Device_Ref": "Device Ref",
+    "View_Indicator": "View Indicator",
+    "noDevices_added_yet" : "No devices added yet"
   },
   "upload": {
     "title": "Upload",
@@ -139,7 +165,42 @@
       "nodata_description" : "There is no data to save. Please add more data.",
       "max_weight" : "Max weight must not exceed {{max}} grams",
       "must_be_greater_than_start" : "Catching date must be greater than the starting date!",
-      "must_be_less_than_the_end" : "Catching date must be less than the end date!"
+      "must_be_less_than_the_end" : "Catching date must be less than the end date!",
+      "fill_weight" : "Please enter the slaughterhouse weight for:"
     }
+  },
+  "setting" : {
+    "summaryReport": "Summary Report",
+    "alarmWarning": "Alarm & Warning",
+    "messageLanguage" : "Message Language",
+    "notification" : "Notification",
+    "language" : "Language",
+    "farmReort" : "Farm Report",
+    "reportType" : "Report Type",
+    "time" : "Time",
+    "type" : "Type",
+    "enable" : "Enable",
+    "delay_time_min" : "Delay Time (min)",
+    "farm_weight_report" : "Farm weight report",
+    "house_weight_report" : "House weight report",
+    "pen_weight_report" : "Pen weight report",
+    "farm_weight_report_female_male" : "Farm weight report (female/male)",
+    "house_weight_report_female_male" : "House weight report (female/male)",
+    "pen_weight_report_female_male" : "Pen weight report (female/male)",
+    "farm_silo_report" : "Farm silo report",
+    "Today's_farm_weight_report" : "Today's farm weight report",
+    "Today's_house_weight_report" : "Today's house weight report",
+    "Today's_pen_weight_report" : "Today's pen weight report",
+
+
+    "warning_message" : "Warning Message",
+    "warning_when_start_crop" : "Warning when start crop",
+    "warning_when_calibrate_device" : "Warning when calibrate device",
+    "warning_when_underweight" : "Warning when underweight",
+    "warning_when_it's_time_to_adjust_the_height_of_the_scale" : "Warning when it's timeto adjust the height of the scale",
+    "warning_when_the_slio_is_refilled" : "Warning when the slio is refilled",
+    "warning_when_the_slio_is_usage" : "Warning when the slio is usage",
+    "warning_when_the_slio_low_level" : "Warning when the slio low_level",
+    "warning_when_the_slio_low_level_repeat" : "Warning when the slio low level (repeat)"
   }
 }

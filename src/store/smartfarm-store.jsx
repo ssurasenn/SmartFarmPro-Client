@@ -212,6 +212,21 @@ isHydrated: false,
     return { success: false, message: err.message };
     }
   },
+   getFeedPlanningDetail: async (farmCode, feedPlanning) => {
+    try {
+      const token = localStorage.getItem("token");
+      if (!token) throw new Error("No token available");
+      
+      console.log("🚨 Calling  FeedPlanning Details with farmCode:", farmCode);
+      const res = await getFeedPlanningDetails(farmCode, feedPlanning);
+      set ({ feedPlanningDetails : res.data || [] });
+
+      return { success: true, data: res.data}
+    } catch (err) {
+      console.error("Error Fail feth FeedPlanningDetails:", err, ", FeedPlanningDetails------>>>", feedPlanning);
+    return { success: false, message: err.message };
+    }
+  },
   getBreedStandardDetail: async (farmCode, breedStandard) => {
     try {
       const token = localStorage.getItem("token");
@@ -228,21 +243,7 @@ isHydrated: false,
       return { success: false, message: err.message };
     }
   },
-  getFeedPlanningDetail: async (farmCode, feedPlanning) => {
-    try {
-      const token = localStorage.getItem("token");
-      if (!token) throw new Error("No token available");
-      
-      console.log("🚨 Calling  FeedPlanning Details with farmCode:", farmCode);
-      const res = await getFeedPlanningDetails(farmCode, feedPlanning);
-      set ({ feedPlanningDetails : res.data || [] });
-
-      return { success: true, data: res.data}
-    } catch (err) {
-      console.error("Error Fail feth FeedPlanningDetails:", err, ", FeedPlanningDetails------>>>", feedPlanning);
-    return { success: false, message: err.message };
-    }
-  },
+ 
   startNewCrop: async (dateStartCrop) => {
     try {
       const { selectedFarmCode, cropList } = useFarmStore.getState();
