@@ -48,6 +48,12 @@
     "member": "Miembros",
     "events": "Eventos"
   },
+  "overview": {
+    "overviewFarm": "Resumen de la granja",
+    "overviewHouse": "Resumen de la casa",
+    "production": "Producción",
+    "farmWeight": "Peso de la granja"
+  },
   "sidebar": {
     "selectFarmAndCrop": "Seleccionar granja y raza",
     "menu": "Menu"
@@ -56,7 +62,7 @@
     "title": "Gestión",
     "manageFarm": "Gestionar granja",
     "manageHouse": "Gestionar casa",
-    "tabSettingProduction": "Configuración de producción"
+    "manageProduction": "Gestión de producción"
   },
   "manage_device": {
     "title": "Gestionar dispositivo",

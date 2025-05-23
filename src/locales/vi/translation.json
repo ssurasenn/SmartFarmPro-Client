@@ -48,6 +48,12 @@
     "member": "Thành viên",
     "events": "Sự kiện"
   },
+  "overview": {
+    "overviewFarm": "Tổng quan trang trại",
+    "overviewHouse": "Tổng quan nhà",
+    "production": "Sản xuất",
+    "farmWeight": "Trọng lượng trang trại"
+  },
   "sidebar": {
     "selectFarmAndCrop": "Chọn trang trại & vụ mùa",
     "selectFarm": "Chọn trang trại...",
@@ -58,7 +64,7 @@
     "title": "Quản lý",
     "manageFarm": "Quản lý trang trại",
     "manageHouse": "Quản lý nhà",
-    "tabSettingProduction": "Cài đặt sản xuất"
+    "manageProduction": "Quản lý sản xuất"
   },
   "manage_device" : {
     "title": "Quản lý thịết bị",

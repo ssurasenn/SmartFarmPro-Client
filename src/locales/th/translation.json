@@ -48,6 +48,12 @@
     "member": "สมาชิก",
     "events": "กิจกรรม"
   },
+  "overview": {
+    "overviewFarm": "ภาพรวมฟาร์ม",
+    "overviewHouse": "ภาพรวมบ้าน",
+    "production": "การผลิต",
+    "farmWeight": "น้ำหนักฟาร์ม"
+  },
   "sidebar": {
     "selectFarmAndCrop": "เลือกฟาร์ม & รอบการเลี้ยง",
     "menu": "เมนู"
@@ -57,7 +63,7 @@
     "title": "การจัดการ",
     "manageFarm": "จัดการฟาร์ม",
     "manageHouse": "จัดการโรงเรือน",
-    "tabSettingProduction": "ตั้งค่าการโปรดักชั่น"
+    "manageProduction": "จัดการโปรดักชั่น"
   },
   "manage_device" : {
     "title": "จัดการอุปกรณ์",

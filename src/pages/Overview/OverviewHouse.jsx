@@ -14,9 +14,9 @@ const OverviewHouse = () => {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-md md:text-xl lg:text-xl font-bold text-gray-700 dark:text-white mb-6">
-        Overview
+    <div className="space-y-4">
+      <h1 className="text-md font-bold text-gray-700 dark:text-white mb-6">
+        Overview House
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">

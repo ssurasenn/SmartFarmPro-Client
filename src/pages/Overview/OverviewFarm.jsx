@@ -1,40 +1,71 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+
 import Feeds from "../../data/Overview_farm";
 import ProductionFarm from "../../components/ProductionFarm";
 import FarmWeight from "../../components/FarmWeight";
 import BellCurveChart from "../../components/BellCurveChartOverview";
 import DailyWeightSummary from "../../components/DailyWeightSummary";
 import usePersistentTab from "../../context/usePersistentTab";
+import { useTranslation } from "react-i18next";
 
 const OverviewFarm = () => {
-  const [selectedTab, setSelectedTab] = usePersistentTab("overviewTab", "production");
+  const [selectedTab, setSelectedTab] = usePersistentTab("production", "production");
+  const { t } =useTranslation();
+  const tabs = useMemo(
+        () => [
+          { key: "production", label: t("overview.production") },
+          { key: "Farm Weight", label: t("overview.farmWeight") },
+        ],
+        [t]
+      );
+    
+      const tabRefs = useRef([]);
+      const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+    
+      useEffect(() => {
+        const currentIndex = tabs.findIndex((tab) => tab.key === selectedTab);
+        const currentTab = tabRefs.current[currentIndex];
+        if (currentTab) {
+          const rect = currentTab.getBoundingClientRect();
+          const parentRect = currentTab.parentElement.getBoundingClientRect();
+          setIndicatorStyle({
+            left: rect.left - parentRect.left,
+            width: rect.width,
+          });
+        }
+      }, [selectedTab, tabs]);
 
   return (
-    <div className="p-4 space-y-4">
-      <h1 className="text-md md:text-xl lg:tex-2xl font-bold text-gray-700 dark:text-white">
-         Overview Farm
+    <div className="space-y-4">
+      <h1 className="text-md font-bold text-gray-700 dark:text-white">
+         {t("overview.overviewFarm")}
       </h1>
-      <div className="flex items-center justify-center gap-6">
-        <h1
-          className={`cursor-pointer pb-1 border-b-2 ${
-            selectedTab === "production"
-              ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
-              : "border-transparent text-gray-600 dark:text-gray-200"
-          }`}
-          onClick={() => setSelectedTab("production")}
-        >
-          Production
-        </h1>
-        <h1
-          className={`cursor-pointer pb-1 border-b-2 ${
-            selectedTab === "Farm Weight"
-              ? "border-blue-500 text-blue-600 dark:border-[#1DCD9F] dark:text-[#1DCD9F] font-bold"
-              : "border-transparent text-gray-600 dark:text-gray-200"
-          }`}
-          onClick={() => setSelectedTab("Farm Weight")}
-        >
-          Farm Weight
-        </h1>
+      <div className="px-6">
+        <div className="relative flex justify-center p-1 bg-gray-100 dark:bg-gray-800 rounded-full shadow-inner max-w-sm sm:max-w-md md:max-w-md mx-auto mb-4 overflow-hidden">
+          {/* Animated indicator */}
+          <span
+            className="absolute top-1 bottom-1 rounded-full bg-[#A1C8FE] dark:bg-[#1DCD9F] transition-all duration-400 ease-in-out"
+            style={{
+              left: indicatorStyle.left,
+              width: indicatorStyle.width,
+            }}
+          />
+
+          {tabs.map((tab, index) => (
+            <button
+              key={tab.key}
+              ref={(el) => (tabRefs.current[index] = el)}
+              onClick={() => setSelectedTab(tab.key)}
+              className={`relative z-10 flex-1 text-xs md:text-sm font-semibold px-3 py-1.5 rounded-full transition-colors duration-300 ${
+                selectedTab === tab.key
+                  ? "text-white hover:bg-blue-500 dark:hover:bg-[#17A783]"
+                  : "text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {selectedTab === "production" && (

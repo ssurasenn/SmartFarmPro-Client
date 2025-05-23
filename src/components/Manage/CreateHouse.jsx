@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import HouseInfoForm from "./HouseInfoForm";
+import { RiAddFill } from "react-icons/ri";
 
 const CreateHouse = () => {
   const [farmData, setFarmData] = useState({
@@ -41,46 +42,47 @@ const CreateHouse = () => {
   };
   const renderTable = (title, data, columns, addAction, onDelete) => (
     <div>
-      <div className="flex justify-between items-center px-3 bg-gray-200">
+      <div className="flex justify-between items-center px-3  bg-gray-200 dark:bg-gray-700 rounded-t-lg">
         <h3 className="text-md font-semibold px-4 py-2 dark:text-white">
           {title}
         </h3>
         <button
           onClick={addAction}
-          className="bg-green-600 text-white px-3 py-1 rounded-xl hover:bg-green-700"
+          className="bg-[#A1C8FE] dark:bg-[#1DCD9F] text-white hover:bg-blue-500 dark:hover:bg-[#17A783] p-2 rounded-lg"
         >
-          ➕ Add
+          <RiAddFill />
+
         </button>
       </div>
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-b-lg space-y-6 p-4 transition-all w-full overflow-x-auto">
       
-      <div className="rounded-md overflow-hidden border border-gray-200">
-        <table className="table-auto w-full text-sm">
-          <thead className="bg-gray-100 ">
+      <div className="rounded-md overflow-hidden border border-gray-200 dark:border-gray-400">
+        <table className="table-auto w-full text-xs">
+          <thead className="bg-gray-200 dark:bg-gray-400">
             <tr>
               {columns.map((col) => (
                 <th
                   key={col.key}
-                  className="border border-gray-300 px-3 py-1 text-left whitespace-nowrap"
+                  className="border border-gray-300 dark:border-gray-400 px-3 py-1 text-center whitespace-nowrap"
                 >
                   {col.header}
                 </th>
               ))}
-              <th className="border border-gray-300 px-2 py-1">Actions</th>
+              <th className="border border-gray-300 dark:border-gray-400 px-2 py-1 text-center whitespace-nowrap">Actions</th>
             </tr>
           </thead>
           <tbody>
             {data.map((row) => (
-              <tr key={row.id} className="hover:bg-gray-50">
+              <tr key={row.id} className="bg-white dark:bg-gray-300 hover:bg-gray-50 dark:hover:bg-gray-200 text-center whitespace-nowrap">
                 {columns.map((col) => (
                   <td
                     key={col.key}
-                    className="border border-gray-300 px-2 py-1"
+                    className="border border-gray-300 dark:border-gray-400 px-2 py-1"
                   >
                     {row[col.key] || ""}
                   </td>
                 ))}
-                <td className="border border-gray-300 px-2 py-1">
+                <td className="border border-gray-300 dark:border-gray-400 px-2 py-1">
                   <button
                     onClick={() => onDelete(row.id)}
                     className="text-red-600 hover:underline text-sm"
@@ -95,9 +97,9 @@ const CreateHouse = () => {
     </div>
   );
   return (
-    <div className="p-4 md:p-4 space-y-6 bg-gray-100 dark:bg-gray-900 ">
+    <div className="flex gap-5">
       {" "}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-4 ">
         <HouseInfoForm
           houses={farmData.houses}
           setHouses={setHouses}

@@ -21,8 +21,7 @@ export default function CreateFarmForm() {
   
 
   return (
-    <div className="flex p-4 md:p-5 space-y-6 bg-gray-100 dark:bg-gray-900 rounded gap-5">
-      <FarmInfoForm farmData={farmData} setFarmData={setFarmData} onSave={() => console.log("Saving Farm Info", farmData)} />
+    <div className="flex p-4 md:p-5  bg-gray-100 dark:bg-gray-900 rounded-lg gap-5">
       <FarmInfoForm farmData={farmData} setFarmData={setFarmData} onSave={() => console.log("Saving Farm Info", farmData)} />
 
       

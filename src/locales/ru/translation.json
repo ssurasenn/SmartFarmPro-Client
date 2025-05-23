@@ -26,7 +26,7 @@
     "title": "Управление",
     "manageFarm": "Управление фермой",
     "manageHouse": "Управление домом",
-    "tabSettingProduction": "Настройки производства"
+    "manageProduction": "Управление производством"
   },
   "manage_device" : {
     "title": "Управление устройством",
@@ -69,6 +69,12 @@
     "notification": "Уведомления",
     "member": "Участники",
     "events": "События"
+  },
+  "overview": {
+    "overviewFarm": "Обзор фермы",
+    "overviewHouse": "Обзор дома",
+    "production": "Производство",
+    "farmWeight": "Вес фермы"
   },
   "sidebar": {
     "selectFarmAndCrop": "Выбрать ферму и культуру",

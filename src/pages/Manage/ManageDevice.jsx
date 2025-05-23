@@ -145,9 +145,9 @@ const ManageDevice = () => {
     localStorage.setItem("device-table", JSON.stringify(devices));
   }, [devices]);
   return (
-    <div className="p-6 space-y-6">
+    <div className="space-y-4">
       <div className="flex items-center justify-between px-6">
-        <h1 className="text-xl font-bold text-gray-700 dark:text-white">{t("manage_device.title")}</h1>
+        <h1 className="text-md font-bold text-gray-700 dark:text-white">{t("manage_device.title")}</h1>
         <button className="bg-[#A1C8FE] dark:bg-[#1DCD9F] text-white dark:hover:bg-[#17B78C] hover:bg-blue-400 px-3 py-1 rounded-lg shadow-md cursor-pointer">+</button>
       </div>
 

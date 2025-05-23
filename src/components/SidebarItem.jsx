@@ -19,14 +19,15 @@ const SidebarItem = ({ icon, title, children, links = [] }) => {
   }, [hasActiveChild]);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // 👈 เปลี่ยนตาม breakpoint ที่ใช้
-    };
+  const handleResize = () => {
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    setIsMobile(window.innerWidth < 768 || isTouchDevice);
+  };
 
-    handleResize(); // เรียกตอน mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  handleResize();
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   const handleMouseEnter = () => {
     if (!isMobile) {

@@ -48,6 +48,12 @@
     "member": "Member",
     "events": "Events"
   },
+  "overview" : {
+    "overviewFarm": "Overview Farm",
+    "overviewHouse": "Overview House",
+    "production": "Production",
+    "farmWeight": "Farm Weight"
+  },
 
   "sidebar": {
     "selectFarmAndCrop": "Select Farm & Crop",
@@ -60,7 +66,7 @@
     "title": "Management",
     "manageFarm": "Manage Farm",
     "manageHouse": "Manage House",
-    "tabSettingProduction": "Setting Production"
+    "manageProduction": "Manage Production"
   },
   "manage_device" : {
     "title": "Manage Device",

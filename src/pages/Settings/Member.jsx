@@ -219,7 +219,7 @@ const Member = () => {
             onClick={handleAddOrUpdate}
             className="w-full bg-[#A1C8FE] dark:bg-[#1DCD9F] hover:bg-blue-500 dark:hover:bg-[#1dcd9ece] text-white py-2 px-4 rounded-lg text-sm font-medium transition-all"
           >
-            {editIndex !== null ? "Update" : "Add"}
+            {editIndex !== null ? "Update" : "Invite"}
           </button>
         </div>
       </div>
@@ -230,9 +230,9 @@ const Member = () => {
       <table className="min-w-full text-sm border-collapse shadow-md rounded-xl overflow-hidden">
         <thead className="bg-[#A1C8FE] dark:bg-[#374151] text-white">
           <tr>
-            <th className="px-4 py-3 text-left">Email</th>
-            <th className="px-4 py-3 text-left">Role</th>
-            <th className="px-4 py-3 text-left">Group / Farm</th> 
+            <th className="px-4 py-3 text-center">Email</th>
+            <th className="px-4 py-3 text-center">Role</th>
+            <th className="px-4 py-3 text-center">Group / Farm</th> 
             <th className="px-4 py-3 text-center">Status</th>
             <th className="px-4 py-3 text-center">Actions</th>
           </tr>
@@ -263,20 +263,20 @@ const Member = () => {
                   onClick={() => handleEdit(index)}
                   className="text-blue-600 hover:text-blue-800 transition font-medium"
                 >
-                  ✏️ Edit
+                  Edit
                 </button>
                 <button
                   onClick={() => handleDelete(index)}
                   className="text-red-500 hover:text-red-700 transition font-medium"
                 >
-                  🗑️ Delete
+                  Delete
                 </button>
               </td>
             </tr>
           ))}
           {users.length === 0 && (
             <tr>
-              <td colSpan="4" className="text-center py-6 text-gray-400 dark:text-gray-500 italic">
+              <td colSpan="5" className="text-center py-6 text-gray-400 dark:text-gray-500 italic">
                 No members yet.
               </td>
             </tr>

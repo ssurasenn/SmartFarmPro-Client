@@ -24,7 +24,7 @@ export default function FarmInfoForm({ farmData, setFarmData, onSave }) {
   );
 
   return (
-    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-md p-4 sm:p-6 space-y-6 transition-all w-1/2 ">
+    <div className="bg-white dark:bg-gray-700 shadow-lg rounded-md p-4 sm:p-6 space-y-4 transition-all w-1/2 ">
       <h2 className="text-md font-semibold text-gray-800 dark:text-white flex items-center gap-2">
         Farm Information
       </h2>

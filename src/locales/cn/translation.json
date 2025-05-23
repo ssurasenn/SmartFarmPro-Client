@@ -48,6 +48,12 @@
     "member": "成员",
     "events": "活动"
   },
+  "overview": {
+    "overviewFarm": "农场概述",
+    "overviewHouse": "房屋概述",
+    "production": "生产",
+    "farmWeight": "农场重量"
+  },
   "sidebar": {
     "selectFarmAndCrop": "选择农场和鸡舍",
     "menu": "菜单"
@@ -56,7 +62,7 @@
     "title": "管理",
     "manageFarm": "管理农场",
     "manageHouse": "管理房屋",
-    "tabSettingProduction": "生产设置"
+    "manageProduction": "管理生产"
   },
   "manage_device" : {
     "title": "设备管理",
