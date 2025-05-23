@@ -629,12 +629,12 @@ const Manage_productVersionThree = () => {
         >
           <div
             onClick={() => setIsCurrentExpanded((prev) => !prev)}
-            className={`flex justify-between items-center px-1 py-2 sm:p-3 md:p-4 lg:px-6 bg-gray-100 dark:bg-gray-700 cursor-pointer ${
+            className={`flex justify-between items-center px-1 py-2 md:p-3 lg:px-3 bg-gray-100 dark:bg-gray-700 cursor-pointer ${
               isCurrentExpanded ? "bg-[#A1C8FE] dark:bg-[#1DCD9F]" : ""
             }`}
           >
             <div className="font-bold text-gray-700 dark:text-white">
-              <div className="flex items-center gap-1 md:gap-5 lg:gap-20">
+              <div className="flex items-center gap-2 md:gap-3">
                 <h2 className="text-xs md:text-md">
                   {t("settingProduction.current.mainCrop")}:{" "}
                   {activeProduction?.MainCrop}
@@ -644,7 +644,7 @@ const Manage_productVersionThree = () => {
                     {t("settingProduction.current.start")}:{" "}
                     {formatDateOnly(startDate || activeProduction?.StartCrop)}
                   </span>
-                  <span className="text-[10px] lg:text-xs lg:ml-5 mx-auto">
+                  <span className="text-[10px] lg:text-xs lg:ml-3 mx-auto">
                     {t("settingProduction.current.end")}:{" "}
                     {formatDateOnly(activeProduction?.EndCrop)}
                   </span>
@@ -957,7 +957,9 @@ const CropTable = ({
                 const houseNames = emptyWeightRows
                   .map((row) => row.HouseName)
                   .join(", ");
-                toast.error(`${t("settingProduction.toast.fill_weight")} ${houseNames}`);
+                toast.error(
+                  `${t("settingProduction.toast.fill_weight")} ${houseNames}`
+                );
 
                 return;
               }
